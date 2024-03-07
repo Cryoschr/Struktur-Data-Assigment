@@ -1,3 +1,3 @@
-Nama  : Irshad Benaya Fardeca\n
-NIM   : 2311102199\n
-Kelas : IF-11-E\n
+#Nama  : Irshad Benaya Fardeca
+#NIM   : 2311102199
+#Kelas : IF-11-E
