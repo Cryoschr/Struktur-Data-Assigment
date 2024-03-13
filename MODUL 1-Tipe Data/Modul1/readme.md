@@ -32,8 +32,23 @@ c. Map: Map menyerupai array tetapi memiliki index yang memungkinkan tipe data s
 
 ## Guided 
 
-### 1. [Nama Topik]
+### 1. Tipe Data Primitif
+![Screenshot 2024-03-13 195838](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/ed78b313-4ec7-4d3d-872b-93375c8acecb)
 
+#### Output:
+![Screenshot 2024-03-13 200005](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/cb78ac7c-1f02-4e21-9df3-0dcbaa548705)
+
+### 2. Tipe Data Abstrak
+![Screenshot 2024-03-13 200127](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/5507d3d7-e4b3-4a54-80e0-d04da49421cc)
+
+#### Output:
+![Screenshot 2024-03-13 200207](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/b384c6e6-cf9b-46f6-b4b4-14e107a6799e)
+
+### 3. Tipe Data Koleksi
+![Screenshot 2024-03-13 200235](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/b3fd81df-8fbf-4add-8a18-38c636acaa17)
+
+#### Output:
+![Screenshot 2024-03-13 200308](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/2bb029c8-7831-40c3-a74c-d9bc3eb98fff)
 
 
 ## Unguided 
