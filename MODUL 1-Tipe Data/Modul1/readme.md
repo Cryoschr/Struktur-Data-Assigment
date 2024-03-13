@@ -102,7 +102,7 @@ Jadi,  Array digunakan untuk menyimpan elemen dengan indeks berurutan, sedangkan
 
 
 ## Referensi
- [1]Modul 1-Tipe Data
- [2]GeeksForGeeks dapat diakses dari https://www.geeksforgeeks.org/difference-between-array-and-map/
- [3]Belajar c++ dapat diakses dari https://www.belajarcpp.com/tutorial/cpp/class/
- [4]Belajar c++ dapat diakses dari https://www.belajarcpp.com/tutorial/c/structure/
+#####[1]Modul 1-Tipe Data
+#####[2]GeeksForGeeks dapat diakses dari https://www.geeksforgeeks.org/difference-between-array-and-map/
+#####[3]Belajar c++ dapat diakses dari https://www.belajarcpp.com/tutorial/cpp/class/
+#####[4]Belajar c++ dapat diakses dari https://www.belajarcpp.com/tutorial/c/structure/
