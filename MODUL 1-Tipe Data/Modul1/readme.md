@@ -64,18 +64,18 @@ Tipe data primitif adalah tipe data dasar yang disediakan oleh bahasa pemrograma
 4. Boolean: Untuk menyimpan nilai true atau false
 
 ### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya
-# Class  
+### Class  
 ![Screenshot 2024-03-13 201447](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/1128b966-f496-488f-b19b-56cc9dd3f57a)
 #### Output:
 ![Screenshot 2024-03-13 201516](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/74fb0666-eed7-47ce-b0f2-3cb8dc9aa649)
 Dalam program, sebuah class bernama Murid dibuat. Class ini memiliki tiga variabel: nama, usia, dan nim. Selain itu, sebuah prosedur bernama cetak() digunakan untuk mencetak nilai dari ketiga variabel tersebut. Di dalam fungsi main(), sebuah objek baru dari class Murid dibuat dan diberi nama murid. Nilai dari variabel nama, usia, dan nim dari objek murid kemudian diubah. Terakhir, prosedur cetak() dari objek murid dipanggil untuk mencetak nilai dari ketiga variabel
-## Fungsi
+### Fungsi
 Class adalah salah satu dari konsep OOP yang digunakan untuk membungkus data abstraksi procedural sebagai deskripsi tergeneralisir atau rancangan dari sebuah object untuk mendefinisikan atau menggambarkan isi dan tingkah laku sebagai entitas dari object.
 Keuntungan Class:
 1. Class membantu dalam membangun program yang lebih terstruktur dan mudah dimengerti.
 2. Class dapat menampung member variabel, function, constructor, destructor, overloading, dan lain-lain.
 3. Selain definisi class, kita juga bisa membuat relasi seperti inheritance dan overriding
-# Struct
+### Struct
 ![Screenshot 2024-03-13 201723](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/3aa27c19-6ebb-4fa3-a7c7-4e2b0ecaeefb)
 #### Output:
 ![Screenshot 2024-03-13 201755](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/70a6d0c6-bc4d-4cd0-bd09-f26212b10132)
