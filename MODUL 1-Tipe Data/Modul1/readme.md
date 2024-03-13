@@ -53,12 +53,25 @@ c. Map: Map menyerupai array tetapi memiliki index yang memungkinkan tipe data s
 
 ## Unguided 
 
-### 1. [Soal]
-
-
+### 1. Buatlah program menggunakan tipe data primitif minimal dua fungsi dan bebas. Menampilkan program, jelaskan program tersebut dan ambil kesimpulan dari materi tipe data primitif!
+![Screenshot 2024-03-13 201223](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/aff30260-17fd-45ca-964f-c9f6dbe37507)
 
 #### Output:
-![240302_00h00m06s_screenshot](https://github.com/suxeno/Struktur-Data-Assignment/assets/111122086/6d1727a8-fb77-4ecf-81ff-5de9386686b7)
+![Screenshot 2024-03-13 201311](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/27c0b3c0-82b5-4912-864f-67071346b61f)
+
+### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya
+![Screenshot 2024-03-13 201447](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/1128b966-f496-488f-b19b-56cc9dd3f57a)
+![Screenshot 2024-03-13 201723](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/3aa27c19-6ebb-4fa3-a7c7-4e2b0ecaeefb)
+
+#### Output:
+![Screenshot 2024-03-13 201516](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/74fb0666-eed7-47ce-b0f2-3cb8dc9aa649)
+![Screenshot 2024-03-13 201755](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/70a6d0c6-bc4d-4cd0-bd09-f26212b10132)
+
+### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map.
+![Screenshot 2024-03-13 201836](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/8986318c-73f1-434f-8bc4-18bcac9a7941)
+
+#### Output:
+![Screenshot 2024-03-13 201857](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/291307ba-c309-488a-ad04-ce714b1891d7)
 
 Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function cout untuk mengeksekusi nya.
 
