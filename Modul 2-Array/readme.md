@@ -35,15 +35,13 @@ empat dimensi, array lima dimensi, dan seterusnya.
 
 
 ## Guided 
-### 1. Tipe Data Primitif
-![Screenshot 2024-03-19 213714](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/268f21e0-d868-49cf-ada8-a9a6e5dc7f38)
+### 1. Array Tiga Dimensi
 
 #### Output:
 ![Screenshot 2024-03-19 214011](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/b0dbfe7c-c8f6-40bb-a720-03860f1857c7)
 
 
-### 2. Tipe Data Abstrak
-![Screenshot 2024-03-19 214040](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/40e15626-ec40-49fd-8a3a-4f6164331d18)
+### 2. Mencari Nilai Maksimal Pada Array
 
 #### Output:
 ![Screenshot 2024-03-19 214128](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/0b4be380-1efc-4b11-825c-a93eec64ce91)
@@ -54,28 +52,23 @@ empat dimensi, array lima dimensi, dan seterusnya.
 ### 1. Buatlah program untuk menampilkan Output seperti berikut dengan data yang diinputkan oleh user!
 ![Screenshot 2024-03-19 220824](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/f4320902-3614-44e5-8aa6-ba846249b6ea)
 
-![Screenshot 2024-03-19 214522](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/03752815-55c4-43bb-b4c7-96b68c7ab02a)
-
 #### Output:
 ![Screenshot 2024-03-19 214543](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/a8ecc4de-4f87-4e67-b560-4185b641d804)
 
 
 
 ### 2. Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
-![Screenshot 2024-03-19 215540](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/cf3eca5e-e7fe-4003-a406-eb58a5c168f3)
-
 
 #### Output:
 ![Screenshot 2024-03-19 215623](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/0af0bb53-7414-45e0-b48f-c32db5bfbab3)
 
 
-### 3. Buat dan jelaskan program menggunakan fungsi map dan jelaskan perbedaan dari array dengan map.
-![Screenshot 2024-03-19 220436](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/8bf58a3a-2e69-4e5b-9d4f-e91067b2ef95)
-
+### 3. Buatlah program menu untuk mencari nilai Maksimum, Minimum dan Nilai rata – rata dari suatu array dengan input yang dimasukan oleh user!
 
 #### Output:
-![Screenshot 2024-03-19 220620](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/c8b97ed8-94b2-43c6-b8fa-22b0a515b45d)
-
+![Screenshot 2024-03-19 222206](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/12477c7c-33c4-4792-a390-474091520cfc)
+![Screenshot 2024-03-19 222502](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/376b4d3c-caf2-4c5b-b539-fed15d0fc763)
+![Screenshot 2024-03-19 222242](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/ba5c4482-1c84-444a-9437-25997a48b555)
 
 ## Kesimpulan
 
