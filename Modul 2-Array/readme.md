@@ -1,4 +1,4 @@
-![Screenshot 2024-03-19 215623](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/4a4cd1d9-c78f-499d-a5c6-5f9e4915c23d)# <h1 align="center">Laporan Praktikum Modul Tipe Data</h1>
+# <h1 align="center">Laporan Praktikum Modul Tipe Data</h1>
 <p align="center">Irshad Benaya Fardeca</p>
 
 # Dasar Teori
