@@ -10,7 +10,7 @@ int main(){
     cin>>b;
     cin>>c;
     //Menampilkan panjang array
-    cout<<"Array[" <<a<< "][" <<b<< "][" <<c<< "]\n";
+    cout<<"Panjang Array[" <<a<< "][" <<b<< "][" <<c<< "]\n";
     cout<<endl;
 
     //Deklarasi array
