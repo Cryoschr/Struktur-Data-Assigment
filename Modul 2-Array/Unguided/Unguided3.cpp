@@ -38,7 +38,7 @@ int main(){
                 maks=array[i];
             }
         }
-        cout<<maks;
+        cout<<"Nilai Maksimum = "<<maks;
     cout<<endl;
         break;
 
@@ -50,7 +50,7 @@ int main(){
                 min=array[i];
             }
         }
-        cout<<min;
+        cout<<"Nilai Minimum = "<<min;
     cout<<endl;
         break;
 
@@ -60,11 +60,13 @@ int main(){
             total+=array[i];
         }
         rata=total/a;
-        cout<<rata;
+        cout<<"Rata-Rata = "<<rata;
+        cout<<endl;
         break;
 
     default:
         cout<<"Silahkan Coba Lagi :]";
+    cout<<endl;
         break;
     }
     return 0;
