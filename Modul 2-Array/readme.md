@@ -3,45 +3,104 @@
 
 # Dasar Teori
 
-Array merupakan struktur data yang paling dasar. Sebelum mempelajari struktur data
-lainnya, alangkah baiknya, kita perlu mempelajari Array terlebih dahulu. Berikut ini
-adalah beberapa jenis array :
+Struktur data yang paling dasar adalah array, dan sebelum mempelajari struktur data lainnya, kita harus mempelajarinya terlebih dahulu. Berikut adalah beberapa jenis array:
+
 
 1) Array Satu Dimensi
-Array satu dimensi adalah tipe variabel yang terdiri dari kumpulan data
-dengan tipe yang sama yang disusun dalam satu baris atau satu dimensi. Setiap
-elemen di dalam array memiliki sebuah indeks atau nomor yang digunakan
-untuk mengakses elemen tersebut. Indeks dimulai dari 0 dan berakhir pada
-jumlah elemen dikurangi satu.
-Contohnya, sebuah array satu dimensi yang berisi bilangan bulat {1, 2,
-3, 4, 5} memiliki lima elemen dan indeksnya dimulai dari 0. Indeks 0 merujuk
-pada elemen pertama, indeks 1 merujuk pada elemen kedua, dan seterusnya
-hingga indeks 4 merujuk pada elemen kelima.
+Kumpulan data dari jenis yang sama yang disusun dalam satu baris atau satu dimensi disebut array satu dimensi. Setiap elemen dalam array memiliki indeks atau nomor yang dapat diakses. Indeks dimulai dari 0 dan berakhir pada jumlah elemen dikurangi satu. Untuk ilustrasi, sebuah array satu dimensi yang terdiri dari bilangan bulat {1, 2, 3, 4, 5} memiliki lima elemen. Indeks 0 menunjukkan elemen pertama, indeks 1 menunjukkan elemen kedua, dan seterusnya hingga indeks 4 menunjukkan elemen kelima.
+
 
 2) Array Dua Dimensi
-Array dua dimensi adalah variable yang terdiri dari kumpulan array
-satu dimensi dengan tipe yang sama yang disusun dalam baris dan kolom.
-Dalam array dua dimensi, setiap elemen memiliki dua indeks, yaitu indeks
-baris dan indeks kolom. Indeks baris menunjukkan posisi elemen dalam baris,
-sementara indeks kolom menunjukkan posisi elemen dalam kolom.
+Array dua dimensi adalah variable yang terdiri dari kumpulan array satu dimensi dengan tipe yang sama yang disusun dalam baris dan kolom. Indeks baris menunjukkan posisi elemen dalam baris, dan indeks kolom menunjukkan posisi elemen dalam kolom.
+
 
 3) Array Multidimensi
+Meskipun mereka mirip dengan array satu dimensi dan dua dimensi, array multidimensi memiliki kapasitas memori yang lebih besar. Mereka digunakan untuk menunjukkan array dengan lebih dari dua dimensi atau dengan lebih dari dua indeks, seperti array tiga dimensi, empat dimensi, dan lima dimensi, dan seterusnya.
 
-Array multidimensi memiliki kesamaan dengan array satu dimensi dan
-dua dimensi, namun memiliki kapasitas memori yang lebih besar. Array ini
-digunakan untuk merepresentasikan array dengan dimensi lebih dari dua atau
-array yang memiliki lebih dari dua indeks, seperti array tiga dimensi, array
-empat dimensi, array lima dimensi, dan seterusnya.
 
 
 ## Guided 
 ### 1. Array Tiga Dimensi
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    //Deklarasi array
+    int arr[2][3][3];
+    
+    //Input elemen
+    for(int x=0;x<2;x++){
+        for(int y=0;y<3;y++){
+            for(int z=0;z<3;z++){
+                cout<<"Input Array[" << x << "][" << y << "][" << z << "] = ";
+                cin>>arr[x][y][z];
+            }
+        }
+        cout<<endl;
+    }
+
+    //Output array
+    for(int x=0;x<2;x++){
+        for(int y=0;y<3;y++){
+            for (int z=0;z<3;z++){
+                cout<<"Data Array[" << x << "][" << y << "][" << z << "]= "<<arr[x][y][z]<<endl;
+            }
+        }
+    }
+    cout<<endl;
+
+    //Tampilan array
+    for(int x=0;x<2;x++){
+        for(int y=0;y<3;y++){
+            for (int z=0;z<3;z++){
+                cout<<arr[x][y][z]<<ends;
+            }
+            cout<<endl;
+        }
+        cout<<endl;
+    }
+    return 0;
+}
 
 #### Output:
 ![Screenshot 2024-03-19 214011](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/b0dbfe7c-c8f6-40bb-a720-03860f1857c7)
 
 
 ### 2. Mencari Nilai Maksimal Pada Array
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    //Deklarasi variabel
+    int maks, a, i=1, lokasi;
+
+    //Input panjang array
+    cout<<"Masukkan panjang array: ";
+    cin>>a;
+    
+    //Deklarasi array
+    int array[a];
+    cout<<"Masukkan "<<a<<" angka\n";
+    for(i=0;i<a;i++){
+        cout<<"Array ke-"<<(i)<<": ";
+        cin>>array[i];
+    }
+    
+    //Mencari nilai maks
+    maks=array[0];
+    for(int i=0;i<a;i++){
+        if(array[i]>maks){
+            maks=array[i];
+            lokasi=i;
+        }
+    }
+
+    //Menampilkan nilai maks dan lokasi array
+    cout<<"Nilai maksimum adalah "<<maks<<" berada di array ke-"<<lokasi<<endl;
+    return 0;
+}
 
 #### Output:
 ![Screenshot 2024-03-19 214128](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/0b4be380-1efc-4b11-825c-a93eec64ce91)
