@@ -25,43 +25,7 @@ Meskipun mereka mirip dengan array satu dimensi dan dua dimensi, array multidime
 #include <iostream>
 using namespace std;
 
-int main(){
-    //Deklarasi array
-    int arr[2][3][3];
-    
-    //Input elemen
-    for(int x=0;x<2;x++){
-        for(int y=0;y<3;y++){
-            for(int z=0;z<3;z++){
-                cout<<"Input Array[" << x << "][" << y << "][" << z << "] = ";
-                cin>>arr[x][y][z];
-            }
-        }
-        cout<<endl;
-    }
-
-    //Output array
-    for(int x=0;x<2;x++){
-        for(int y=0;y<3;y++){
-            for (int z=0;z<3;z++){
-                cout<<"Data Array[" << x << "][" << y << "][" << z << "]= "<<arr[x][y][z]<<endl;
-            }
-        }
-    }
-    cout<<endl;
-
-    //Tampilan array
-    for(int x=0;x<2;x++){
-        for(int y=0;y<3;y++){
-            for (int z=0;z<3;z++){
-                cout<<arr[x][y][z]<<ends;
-            }
-            cout<<endl;
-        }
-        cout<<endl;
-    }
-    return 0;
-}
+https://github.com/Cryoschr/Struktur-Data-Assigment/blob/main/Modul%202-Array/Guided/Guided1.cpp
 
 #### Output:
 ![Screenshot 2024-03-19 214011](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/b0dbfe7c-c8f6-40bb-a720-03860f1857c7)
@@ -69,38 +33,7 @@ int main(){
 
 ### 2. Mencari Nilai Maksimal Pada Array
 
-#include <iostream>
-using namespace std;
-
-int main(){
-    //Deklarasi variabel
-    int maks, a, i=1, lokasi;
-
-    //Input panjang array
-    cout<<"Masukkan panjang array: ";
-    cin>>a;
-    
-    //Deklarasi array
-    int array[a];
-    cout<<"Masukkan "<<a<<" angka\n";
-    for(i=0;i<a;i++){
-        cout<<"Array ke-"<<(i)<<": ";
-        cin>>array[i];
-    }
-    
-    //Mencari nilai maks
-    maks=array[0];
-    for(int i=0;i<a;i++){
-        if(array[i]>maks){
-            maks=array[i];
-            lokasi=i;
-        }
-    }
-
-    //Menampilkan nilai maks dan lokasi array
-    cout<<"Nilai maksimum adalah "<<maks<<" berada di array ke-"<<lokasi<<endl;
-    return 0;
-}
+https://github.com/Cryoschr/Struktur-Data-Assigment/blob/main/Modul%202-Array/Guided/Guided2.cpp
 
 #### Output:
 ![Screenshot 2024-03-19 214128](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/0b4be380-1efc-4b11-825c-a93eec64ce91)
