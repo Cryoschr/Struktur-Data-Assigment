@@ -12,7 +12,7 @@ Kumpulan data dari jenis yang sama yang disusun dalam satu baris atau satu dimen
 Array dua dimensi adalah variable yang terdiri dari kumpulan array satu dimensi dengan tipe yang sama yang disusun dalam baris dan kolom. Indeks baris menunjukkan posisi elemen dalam baris, dan indeks kolom menunjukkan posisi elemen dalam kolom.
 
 3. Array Multidimensi
-Meskipun mereka mirip dengan array satu dimensi dan dua dimensi, array multidimensi memiliki kapasitas memori yang lebih besar. Mereka digunakan untuk menunjukkan array dengan lebih dari dua dimensi atau dengan lebih dari dua indeks, seperti array tiga dimensi, empat dimensi, dan lima dimensi, dan seterusnya.[2]
+Meskipun mereka mirip dengan array satu dimensi dan dua dimensi, array multidimensi memiliki kapasitas memori yang lebih besar. Mereka digunakan untuk menunjukkan array dengan lebih dari dua dimensi atau dengan lebih dari dua indeks, seperti array tiga dimensi, empat dimensi, dan lima dimensi, dan seterusnya.[1]
 
 
 
@@ -300,6 +300,7 @@ int main(){
 Codingan C++ ini digunakan untuk mencari nilai maksimum, minimum, dan rata-rata dari sebuah array. Pertama, pengguna diminta untuk memasukkan panjang array. Kemudian, nilai-nilai array dimasukkan satu per satu. Setelah itu, pengguna memilih menu yang ingin dijalankan, yaitu mencari nilai maksimum, minimum, atau rata-rata. Program akan menghitung nilai yang dipilih dan menampilkannya di layar. Codingan ini mudah dipahami dan dimodifikasi untuk kebutuhan yang lebih kompleks.
 
 ## Kesimpulan
+Array merupakan struktur data penting untuk menyimpan data terstruktur. Jenis array dikategorikan berdasarkan dimensinya, yaitu array satu dimensi, dua dimensi, dan multidimensi. Array satu dimensi digunakan untuk menyimpan daftar data sederhana, array dua dimensi cocok untuk tabel, matriks, dan gambar, sedangkan array multidimensi digunakan untuk data kompleks dengan struktur multidimensi. Memilih jenis array yang tepat membantu programmer dalam mengelola data dan meningkatkan efisiensi program. Array menawarkan akses data yang cepat dan mudah, serta dapat diolah dengan berbagai operasi. Memahami jenis array dan karakteristiknya merupakan langkah awal penting dalam mempelajari struktur data yang lebih kompleks.
 
 
 ## Referensi
