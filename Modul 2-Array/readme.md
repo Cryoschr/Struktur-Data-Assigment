@@ -2,8 +2,8 @@
 <p align="center">Irshad Benaya Fardeca</p>
 
 # Dasar Teori
-
-Struktur data yang paling dasar adalah array, dan sebelum mempelajari struktur data lainnya, kita harus mempelajarinya terlebih dahulu. Berikut adalah beberapa jenis array:
+Array adalah kumpulan dari sejumlah tetap komponen yang semuanya memiliki tipe data yang sama. Array satu dimensi adalah array dimana komponen-komponennya disusun dalam bentuk daftar.[2] Array terdiri dari satu dimensi, dua dimensi atau lebih.
+Berikut adalah beberapa jenis array:
 
 1. Array Satu Dimensi
 Kumpulan data dari jenis yang sama yang disusun dalam satu baris atau satu dimensi disebut array satu dimensi. Setiap elemen dalam array memiliki indeks atau nomor yang dapat diakses. Indeks dimulai dari 0 dan berakhir pada jumlah elemen dikurangi satu. Untuk ilustrasi, sebuah array satu dimensi yang terdiri dari bilangan bulat {1, 2, 3, 4, 5} memiliki lima elemen. Indeks 0 menunjukkan elemen pertama, indeks 1 menunjukkan elemen kedua, dan seterusnya hingga indeks 4 menunjukkan elemen kelima.
@@ -13,7 +13,6 @@ Array dua dimensi adalah variable yang terdiri dari kumpulan array satu dimensi 
 
 3. Array Multidimensi
 Meskipun mereka mirip dengan array satu dimensi dan dua dimensi, array multidimensi memiliki kapasitas memori yang lebih besar. Mereka digunakan untuk menunjukkan array dengan lebih dari dua dimensi atau dengan lebih dari dua indeks, seperti array tiga dimensi, empat dimensi, dan lima dimensi, dan seterusnya.[1]
-
 
 
 ## Guided 
@@ -62,13 +61,7 @@ int main(){
 ```
 #### Output:
 ![Screenshot 2024-03-19 214011](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/b0dbfe7c-c8f6-40bb-a720-03860f1857c7)
- Pertama, program ini mendeklarasikan array bernama "arr" dengan ukuran 2 x 3 x 3. Ini berarti array tersebut memiliki 2 lapisan, dimana setiap lapisan berisi grid 3 x 3.
-
-Kemudian, program menggunakan tiga loop for bersarang untuk meminta input dari pengguna untuk mengisi setiap elemen array. Looping akan berjalan sebanyak 2 x 3 x 3 iterasi, sesuai dengan jumlah elemen keseluruhan dalam array.
-
-Setelah input selesai, program menampilkan isi array menggunakan loop for bersarang yang sama. Bedanya, kali ini program mencetak nilai yang tersimpan pada setiap elemen array.
-
-Terakhir, program menampilkan isi array dalam format grid 2 x 3. Loop for bersarang  digunakan kembali untuk mengakses elemen per elemen, namun pada saat mencetak, program menambahkan karakter "ends" untuk mengatur jarak antar elemen sehingga terbentuk tampilan grid.
+Program mendeklarasikan array yang berukuran 2 x 3 x 3. Program kemudian menggunakan tiga loop untuk meminta input pengguna untuk mengisi setiap elemen array. Looping akan berjalan sebanyak 2 x 3 x 3, sesuai dengan jumlah elemen total dalam array. Setelah input selesai, program menampilkan isi array menggunakan loop. Selanjutnya, program mencetak nilai yang tersimpan pada setiap elemen array. Isi array ditampilkan dalam bentuk matriks 2 x 3 x 3, dengan loop untuk mengakses elemen per elemen. Saat mencetak, program menambahkan karakter "ends" untuk mengatur jarak antar elemen, sehingga terbentuk tampilan matriks.
 
 ### 2. Mencari Nilai Maksimal Pada Array
 ```C++
@@ -107,13 +100,8 @@ int main(){
 ```
 #### Output:
 ![Screenshot 2024-03-19 214128](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/0b4be380-1efc-4b11-825c-a93eec64ce91)
-ertama, program ini mendeklarasikan array bernama "arr" dengan ukuran 2 x 3 x 3. Ini berarti array tersebut memiliki 2 lapisan, dimana setiap lapisan berisi grid 3 x 3.
+Program ini menemukan nilai maksimum array dan menunjukkan lokasinya. Program menentukan variabel yang digunakan untuk menyimpan nilai maksimum, panjang array, dan lokasi. Kemudian, program meminta pengguna untuk memasukkan panjang dan nilai elemen array masing-masing. Kemudian, program menginisialisasi nilai maksimum dengan nilai elemen array pertama. Kemudian, program melakukan perulangan untuk setiap elemen array dan membandingkannya dengan nilai maksimum. Jika nilai elemen array lebih besar dari nilai maksimum, maka elemen array tersebut akan dihapus dari array. Selanjutnya Program menampilkan nilai maks dan lokasi array.
 
-Kemudian, program menggunakan tiga loop for bersarang untuk meminta input dari pengguna untuk mengisi setiap elemen array. Looping akan berjalan sebanyak 2 x 3 x 3 iterasi, sesuai dengan jumlah elemen keseluruhan dalam array.
-
-Setelah input selesai, program menampilkan isi array menggunakan loop for bersarang yang sama. Bedanya, kali ini program mencetak nilai yang tersimpan pada setiap elemen array.
-
-Terakhir, program menampilkan isi array dalam format grid 2 x 3. Loop for bersarang  digunakan kembali untuk mengakses elemen per elemen, namun pada saat mencetak, program menambahkan karakter "ends" untuk mengatur jarak antar elemen sehingga terbentuk tampilan grid.
 
 ## Unguided 
 ### 1. Buatlah program untuk menampilkan Output seperti berikut dengan data yang diinputkan oleh user!
@@ -155,13 +143,7 @@ int main(){
 ```
 #### Output:
 ![Screenshot 2024-03-19 214543](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/a8ecc4de-4f87-4e67-b560-4185b641d804)
-Kodingan C++ di atas mendemonstrasikan cara mencari nomor genap dan ganjil dalam sebuah array. Pertama, program mendeklarasikan variabel genap dan array array dengan 10 elemen. Kemudian, program menampilkan seluruh elemen array.
-
-Selanjutnya, program menggunakan perulangan for untuk mencari nomor genap. Di dalam perulangan, program menggunakan operator modulo % untuk memeriksa apakah elemen array saat ini habis dibagi 2. Jika ya, program akan menampilkan elemen tersebut.
-
-Setelah itu, program melakukan hal yang sama untuk mencari nomor ganjil. Bedanya, program menggunakan operator != untuk memeriksa apakah elemen array saat ini tidak habis dibagi 2.
-
-Terakhir, program mengembalikan nilai 0 untuk menunjukkan bahwa program telah selesai berjalan dengan sukses.
+Program ini menunjukkan cara mencari nomor genap dan ganjil dalam sebuah array dengan mendeklarasikan variabel genap dan array dengan sepuluh elemen. Kemudian, program menampilkan seluruh elemen array dan menggunakan perulangan for untuk menemukan nomor genap. Di dalam perulangan, program mencari tahu apakah elemen dalam array saat ini habis dibagi 2. Jika hasilnya adalah ya, elemen tersebut akan ditampilkan. Untuk mencari nomor ganjil, program mencari apakah elemen dalam array saat ini tidak habis dibagi 2. Kemudian program menampilkan hasilnya.
 
 ### 2. Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
 ```C++
@@ -215,7 +197,7 @@ int main(){
 ```
 #### Output:
 ![Screenshot 2024-03-19 215623](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/0af0bb53-7414-45e0-b48f-c32db5bfbab3)
-Paragraf kode C++ ini mendemonstrasikan bagaimana cara membuat dan menggunakan array 3 dimensi. Pertama, program meminta pengguna untuk memasukkan panjang dari ketiga dimensi array tersebut. Setelah itu, program mendeklarasikan array dengan ukuran yang sesuai dengan input pengguna. Kemudian, program meminta pengguna untuk memasukkan nilai-nilai ke dalam setiap elemen array menggunakan tiga loop for yang bersarang. Terakhir, program menampilkan isi dari seluruh elemen array tersebut dalam format 3 dimensi.
+Program ini menunjukkan cara membuat dan menggunakan array tiga dimensi. Ini meminta pengguna untuk memasukkan panjang dari ketiga dimensi array tersebut, kemudian mendeklarasikan array dengan ukuran yang sesuai dengan input pengguna. Setelah itu, program meminta pengguna untuk memasukkan nilai ke dalam setiap elemen array menggunakan tiga loop for yang bersarang, dan kemudian menampilkan isi dari seluruh array dalam matriks tiga dimensi di layar.
 
 ### 3. Buatlah program menu untuk mencari nilai Maksimum, Minimum dan Nilai rata – rata dari suatu array dengan input yang dimasukan oleh user!
 ```C++
@@ -297,11 +279,13 @@ int main(){
 ![Screenshot 2024-03-19 222206](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/12477c7c-33c4-4792-a390-474091520cfc)
 ![Screenshot 2024-03-19 222502](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/376b4d3c-caf2-4c5b-b539-fed15d0fc763)
 ![Screenshot 2024-03-19 222242](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/ba5c4482-1c84-444a-9437-25997a48b555)
-Codingan C++ ini digunakan untuk mencari nilai maksimum, minimum, dan rata-rata dari sebuah array. Pertama, pengguna diminta untuk memasukkan panjang array. Kemudian, nilai-nilai array dimasukkan satu per satu. Setelah itu, pengguna memilih menu yang ingin dijalankan, yaitu mencari nilai maksimum, minimum, atau rata-rata. Program akan menghitung nilai yang dipilih dan menampilkannya di layar. Codingan ini mudah dipahami dan dimodifikasi untuk kebutuhan yang lebih kompleks.
+Program ini menghitung nilai maksimum, minimum, dan rata-rata dari sebuah array. Panjang array yang dimasukkan oleh user dan nilai-nilainya dimasukkan satu per satu. Kemudian, user dapat memilih menu untuk mencari nilai maksimum, minimum, atau rata-rata dan menampilkannya di layar.
+
 
 ## Kesimpulan
-Array merupakan struktur data penting untuk menyimpan data terstruktur. Jenis array dikategorikan berdasarkan dimensinya, yaitu array satu dimensi, dua dimensi, dan multidimensi. Array satu dimensi digunakan untuk menyimpan daftar data sederhana, array dua dimensi cocok untuk tabel, matriks, dan gambar, sedangkan array multidimensi digunakan untuk data kompleks dengan struktur multidimensi. Memilih jenis array yang tepat membantu programmer dalam mengelola data dan meningkatkan efisiensi program. Array menawarkan akses data yang cepat dan mudah, serta dapat diolah dengan berbagai operasi. Memahami jenis array dan karakteristiknya merupakan langkah awal penting dalam mempelajari struktur data yang lebih kompleks.
+Array merupakan struktur data penting untuk menyimpan data terstruktur. Jenis array dikategorikan berdasarkan dimensinya, yaitu array satu dimensi, dua dimensi, dan multidimensi. Array satu dimensi digunakan untuk menyimpan daftar data sederhana, array dua dimensi cocok untuk tabel, matriks, sedangkan array multidimensi digunakan untuk data kompleks dengan struktur multidimensi. Memilih jenis array yang tepat membantu dalam mengelola data dan meningkatkan efisiensi program. Array menawarkan akses data yang cepat dan mudah, serta dapat digunakan dalam berbagai operasi.
 
 
 ## Referensi
 [1] MODUL 2-ARRAY
+[2] Malik, D. S. (2023). C++ programming. Cengage Learning, EMEA.
