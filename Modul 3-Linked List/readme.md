@@ -336,6 +336,17 @@ int main()
 }
 ```
 #### Output:
+Program di atas merupakan contoh implementasi Single Linked List Non-Circular dalam bahasa C++. Single Linked List adalah struktur data yang terdiri dari kumpulan node yang saling terhubung dengan pointer. Node adalah elemen penyusun Single Linked List yang menyimpan data dan pointer ke node berikutnya.
+
+Program ini memiliki beberapa fungsi untuk memanipulasi Single Linked List, seperti:
+
+Inisialisasi: Mengatur head dan tail menjadi NULL untuk menunjukkan list kosong.
+Memeriksa Keberadaan: Mengecek apakah list kosong.
+Penambahan Node: Menambahkan node baru di depan, belakang, atau di posisi tertentu di tengah list.
+Penghapusan Node: Menghapus node pertama, terakhir, atau di posisi tertentu di tengah list.
+Perubahan Data: Mengubah data node pertama, terakhir, atau di posisi tertentu di tengah list.
+Penghitungan: Menghitung jumlah node dalam list.
+Penampilan Data: Menampilkan data semua node dalam list.
 
 
 ### 2. Double Linked List
@@ -487,6 +498,13 @@ int main() {
 }
 ```
 #### Output:
+Program di atas merupakan implementasi Double Linked List Non-Circular dalam bahasa C++. Double Linked List adalah struktur data yang mirip dengan Single Linked List, namun setiap node memiliki dua pointer: prev dan next. Pointer prev menunjuk ke node sebelumnya, dan pointer next menunjuk ke node berikutnya.
+
+Kelas DoublyLinkedList mendefinisikan Double Linked List dengan member head dan tail yang menunjuk ke node pertama dan terakhir. Konstruktor menginisialisasi head dan tail menjadi nullptr (menandakan list kosong).
+
+Fungsi push(int data) menambahkan node baru dengan data data di depan list. Fungsi pop() menghapus node pertama dari list. Fungsi update(int oldData, int newData) mencari node dengan data oldData dan memperbaruinya dengan newData. Fungsi deleteAll() menghapus semua node dari list. Fungsi display() menampilkan data semua node dalam list.
+
+Fungsi-fungsi di main() menampilkan menu interaktif untuk menambah, menghapus, memperbarui, menghapus semua, dan menampilkan data dalam list. Berdasarkan pilihan pengguna, program memanggil fungsi terkait pada objek list yang merupakan instance dari kelas DoublyLinkedList.
 
 
 ## Unguided 
@@ -557,7 +575,6 @@ Cleora 55.000
 
 
 ## Kesimpulan
-Array merupakan struktur data penting untuk menyimpan data terstruktur. Jenis array dikategorikan berdasarkan dimensinya, yaitu array satu dimensi, dua dimensi, dan multidimensi. Array satu dimensi digunakan untuk menyimpan daftar data sederhana, array dua dimensi cocok untuk tabel, matriks, sedangkan array multidimensi digunakan untuk data kompleks dengan struktur multidimensi. Memilih jenis array yang tepat membantu dalam mengelola data dan meningkatkan efisiensi program. Array menawarkan akses data yang cepat dan mudah, serta dapat digunakan dalam berbagai operasi.
 
 
 ## Referensi
