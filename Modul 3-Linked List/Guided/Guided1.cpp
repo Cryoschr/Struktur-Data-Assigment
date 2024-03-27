@@ -9,6 +9,7 @@ struct Node
     int data;
     Node *next;
 };
+
 Node *head;
 Node *tail;
 // Inisialisasi Node
@@ -17,6 +18,7 @@ void init()
     head = NULL;
     tail = NULL;
 }
+
 // Pengecekan
 bool isEmpty()
 {
@@ -25,6 +27,7 @@ bool isEmpty()
     else
         return false;
 }
+
 // Tambah Depan
 void insertDepan(int nilai)
 {
@@ -43,6 +46,7 @@ void insertDepan(int nilai)
         head = baru;
     }
 }
+
 // Tambah Belakang
 void insertBelakang(int nilai)
 {
@@ -61,6 +65,7 @@ void insertBelakang(int nilai)
         tail = baru;
     }
 }
+
 // Hitung Jumlah List
 int hitungList()
 {
@@ -74,6 +79,7 @@ int hitungList()
     }
     return jumlah;
 }
+
 // Tambah Tengah
 void insertTengah(int data, int posisi)
 {
@@ -102,6 +108,7 @@ void insertTengah(int data, int posisi)
         bantu->next = baru;
     }
 }
+
 // Hapus Depan
 void hapusDepan()
 {
@@ -124,6 +131,7 @@ void hapusDepan()
         cout << "List kosong!" << endl;
     }
 }
+
 // Hapus Belakang
 void hapusBelakang()
 {
@@ -153,6 +161,7 @@ void hapusBelakang()
         cout << "List kosong!" << endl;
     }
 }
+
 // Hapus Tengah
 void hapusTengah(int posisi)
 {
@@ -186,6 +195,7 @@ void hapusTengah(int posisi)
         delete hapus;
     }
 }
+
 // Ubah Depan
 void ubahDepan(int data)
 {
@@ -198,6 +208,7 @@ void ubahDepan(int data)
         cout << "List masih kosong!" << endl;
     }
 }
+
 // Ubah Tengah
 void ubahTengah(int data, int posisi)
 {
@@ -229,6 +240,7 @@ void ubahTengah(int data, int posisi)
         cout << "List masih kosong!" << endl;
     }
 }
+
 // Ubah Belakang
 void ubahBelakang(int data)
 {
@@ -241,6 +253,7 @@ void ubahBelakang(int data)
         cout << "List masih kosong!" << endl;
     }
 }
+
 // Hapus List
 void clearList()
 {
@@ -255,6 +268,7 @@ void clearList()
     head = tail = NULL;
     cout << "List berhasil terhapus!" << endl;
 }
+
 // Tampilkan List
 void tampil()
 {
@@ -274,6 +288,7 @@ void tampil()
         cout << "List masih kosong!" << endl;
     }
 }
+
 int main()
 {
     init();

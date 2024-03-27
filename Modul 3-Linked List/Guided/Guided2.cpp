@@ -1,12 +1,15 @@
 #include <iostream>
 using namespace std;
 
+/// PROGRAM DOUBLE LINKED LIST NON-CIRCULAR
 
 class Node {
     public:int data;
     Node* prev;
     Node* next;
 };
+
+//
 class DoublyLinkedList {
         public:
         Node* head;
@@ -15,6 +18,8 @@ class DoublyLinkedList {
             head = nullptr;
             tail = nullptr;
     }
+
+    //Menambah data 
     void push(int data) {
         Node* newNode = new Node;
         newNode->data = data;
@@ -28,6 +33,8 @@ class DoublyLinkedList {
         }
         head = newNode;
     }
+
+    //Menghapus data
     void pop() {
         if (head == nullptr) {
             return;
@@ -42,6 +49,8 @@ class DoublyLinkedList {
         }
         delete temp;
     }
+
+    //Menggupdate data
     bool update(int oldData, int newData) {
         Node* current = head;while (current != nullptr) {
             if (current->data == oldData) {
@@ -52,6 +61,8 @@ class DoublyLinkedList {
         }
         return false;
     }
+
+    //Menghapus semua data
     void deleteAll() {
         Node* current = head;
         while (current != nullptr) {
@@ -62,6 +73,8 @@ class DoublyLinkedList {
         head = nullptr;
         tail = nullptr;
     }
+
+    //Menampilkan data
     void display() {
         Node* current = head;
         while (current != nullptr) {
@@ -116,6 +129,8 @@ int main() {
                 list.display();
                 break;
             }
+
+            //Mengakhiri program
             case 6: {
                 return 0;
             }
