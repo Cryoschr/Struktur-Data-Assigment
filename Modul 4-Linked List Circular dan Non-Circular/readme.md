@@ -691,7 +691,7 @@ public:
             last->next = newNode;
             head = newNode;
         }
-        cout << "Node berhasil ditambahkan" << endl;
+        cout << "Data berhasil ditambahkan" << endl;
     }
 
     // Menambahkan di belakang
@@ -711,7 +711,7 @@ public:
             last->next = newNode;
             newNode->next = head;
         }
-        cout << "Node berhasil ditambahkan" << endl;
+        cout << "Data berhasil ditambahkan" << endl;
     }
 
     // Menambahkan di tengah
@@ -727,7 +727,7 @@ public:
         if (head == nullptr) {
             head = newNode;
             newNode->next = head;
-            cout << "Node berhasil ditambahkan" << endl;
+            cout << "Data berhasil ditambahkan" << endl;
             return;
         }
 
@@ -745,7 +745,7 @@ public:
 
         newNode->next = tail->next;
         tail->next = newNode;
-        cout << "Node berhasil ditambahkan" << endl;
+        cout << "Data berhasil ditambahkan" << endl;
     }
 
     // Ubah data di depan
@@ -895,9 +895,9 @@ public:
             return;
         }
         Node* tail = head;
-        cout << "Nama" << "     " << "NIM" << endl;
+        cout << "| Nama" << "   |   " << "NIM |" << endl;
         do {
-            cout << tail->nama << tail->nim << endl;
+            cout <<"| " << tail->nama << "   |   " << tail->nim << " |" << endl;
             tail = tail->next;
         } while (tail != head);
     }
@@ -1039,9 +1039,17 @@ Bagas 2330002
 i) Hapus data akhir
 j) Tampilkan seluruh data
 
-
 #### Output:
-
+![Screenshot 2024-04-04 000201](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/d9424227-f5a9-4548-99c6-986e8222387f)
+![Screenshot 2024-04-04 000332](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/1b4a1302-7e88-42e6-beeb-7b7d6843e996)
+![Screenshot 2024-04-04 000417](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/3b56fbc9-8dc3-459b-9eaf-53e45bebb718)
+![Screenshot 2024-04-04 000500](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/fc1fdaa9-9c6c-4f3b-9147-491f5c34b0a6)
+![Screenshot 2024-04-04 000547](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/9b0e8523-b9c2-4f83-8292-83ee3e7bf1cb)
+![Screenshot 2024-04-04 000801](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/32e93d0a-236e-4d9d-8e5c-5eda0553829f)
+![Screenshot 2024-04-04 000834](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/e299cc46-ffad-48f4-86ae-e9a576dfb685)
+![Screenshot 2024-04-04 000903](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/577e145e-63a8-4682-808b-6660139fb670)
+![Screenshot 2024-04-04 000940](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/a6648d95-034b-4577-8b96-b4577c49fffb)
+![Screenshot 2024-04-04 001006](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/f37b0788-ac1c-4fc5-88ec-9b6952840670)
 Program di atas merupakan program menu linked list circular untuk menyimpan data nama dan NIM mahasiswa. Program ini memungkinkan user untuk melakukan berbagai operasi seperti penambahan data di depan, belakang, dan tengah, penghapusan data di depan, belakang, dan tengah, mengubah data di depan, belakang, dan tengah, menghapus list serta menampilkan seluruh data.
 
 ## Kesimpulan
