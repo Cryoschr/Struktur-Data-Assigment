@@ -151,7 +151,6 @@ int main() {
 
     do {
         cout << "Toko Skincare Purwokerto" << endl;
-
         cout << "1. Tambah Data" << endl;
         cout << "2. Hapus Data" << endl;
         cout << "3. Update Data" << endl;

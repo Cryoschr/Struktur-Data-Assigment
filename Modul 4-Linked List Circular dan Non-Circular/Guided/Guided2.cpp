@@ -1,18 +1,16 @@
 #include <iostream>
-
 using namespace std;
 
 /// PROGRAM SINGLE LINKED LIST CIRCULAR
-
 // Deklarasi Struct Node
-struct Node
-{
+struct Node{
     string data;
     Node *next;
 };
 
 Node *head, *tail, *baru, *bantu, *hapus;
 
+//iinisialisasi node
 void init()
 {
     head = NULL;
@@ -158,6 +156,7 @@ void hapusDepan()
         cout << "List masih kosong!" << endl;
     }
 }
+
 // Hapus Belakang
 void hapusBelakang()
 {
@@ -256,8 +255,8 @@ void tampil()
         cout << "List masih kosong!" << endl;
     }
 }
-int main()
-{
+
+int main(){
     init();
     insertDepan("Ayam");
     tampil();
