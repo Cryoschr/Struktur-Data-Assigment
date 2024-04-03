@@ -38,7 +38,7 @@ public:
             last->next = newNode;
             head = newNode;
         }
-        cout << "Node berhasil ditambahkan" << endl;
+        cout << "Data berhasil ditambahkan" << endl;
     }
 
     // Menambahkan di belakang
@@ -58,7 +58,7 @@ public:
             last->next = newNode;
             newNode->next = head;
         }
-        cout << "Node berhasil ditambahkan" << endl;
+        cout << "Data berhasil ditambahkan" << endl;
     }
 
     // Menambahkan di tengah
@@ -74,7 +74,7 @@ public:
         if (head == nullptr) {
             head = newNode;
             newNode->next = head;
-            cout << "Node berhasil ditambahkan" << endl;
+            cout << "Data berhasil ditambahkan" << endl;
             return;
         }
 
@@ -92,7 +92,7 @@ public:
 
         newNode->next = tail->next;
         tail->next = newNode;
-        cout << "Node berhasil ditambahkan" << endl;
+        cout << "Data berhasil ditambahkan" << endl;
     }
 
     // Ubah data di depan
@@ -242,9 +242,9 @@ public:
             return;
         }
         Node* tail = head;
-        cout << "Nama" << "     " << "NIM" << endl;
+        cout << "| Nama" << "   |   " << "NIM |" << endl;
         do {
-            cout << tail->nama << tail->nim << endl;
+            cout <<"| " << tail->nama << "   |   " << tail->nim << " |" << endl;
             tail = tail->next;
         } while (tail != head);
     }
