@@ -6,7 +6,7 @@
 
 
 ## Guided 
-### 1. 
+### 1. Guided 1
 ```C++
 #include <iostream>
 using namespace std;
@@ -132,21 +132,10 @@ int main() {
 ```
 #### Output:
 ![Screenshot 2024-04-09 233034](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/114b1958-b536-4990-bcc6-207ca8599985)
-Program ini mengimplementasikan hash table dasar dalam C++. Hash table adalah teknik yang digunakan untuk menyimpan pasangan key-value dengan operasi penyisipan, pencarian, dan penghapusan yang efisien.
-
-Program ini mendefinisikan fungsi hash sederhana untuk menghitung indeks hash untuk key yang diberikan. Struktur Node digunakan untuk mewakili node individual dalam hash table, yang menyimpan key, value, dan pointer ke node berikutnya.
-
-Kelas HashTable mendefinisikan konstruktor dan destruktor untuk mengelola memori, serta fungsi untuk:
-
-* Menyisipkan pasangan key-value ke dalam hash table.
-* Mencari key dalam hash table dan mengembalikan value terkait.
-* Menghapus key dan value dari hash table.
-* Mencetak semua pasangan key-value dalam hash table.
-
-Fungsi main membuat instance HashTable, menunjukkan contoh penggunaan fungsi insert, get, remove, dan traverse, dan akhirnya mencetak konten hash table.
+Program ini mendefinisikan fungsi hash sederhana untuk menghitung indeks hash untuk key yang diberikan. Struktur Node digunakan untuk mewakili node individual dalam hash table, yang menyimpan key, value, dan pointer ke node berikutnya. Fungsi main, menunjukkan contoh penggunaan fungsi insert, get, remove, dan traverse, dan akhirnya mencetak konten hash table.
 
 
-### 2. 
+### 2. Guided 2
 ```C++
 #include <iostream>
 #include <string>
@@ -255,11 +244,7 @@ int main() {
 ```
 #### Output:
 ![Screenshot 2024-04-09 233135](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/915815d3-3a15-4f4f-b4d8-747c8f9d3c55)
-Program ini mengimplementasikan direktori telepon sederhana menggunakan hash table. Hash table menyimpan pasangan nama dan nomor telepon, memungkinkan pencarian dan penyisipan data yang efisien.
-
-Fungsi hashFunc menghitung index hash table berdasarkan nama. insert menambahkan data ke hash table, memperbarui nomor telepon jika nama sudah ada. remove menghapus data berdasarkan nama. searchByName mencari nomor telepon berdasarkan nama. print menampilkan isi hash table.
-
-Contoh penggunaan program menunjukkan cara menambahkan, mencari, menghapus, dan menampilkan data dalam direktori telepon.
+Program ini mengimplementasikan direktori telepon sederhana menggunakan hash table. Hash table menyimpan pasangan nama dan nomor telepon, memungkinkan pencarian dan penyisipan data yang efisien. Fungsi hashFunc menghitung index hash table berdasarkan nama. insert menambahkan data ke hash table, memperbarui nomor telepon jika nama sudah ada. remove menghapus data berdasarkan nama. searchByName mencari nomor telepon berdasarkan nama. print menampilkan isi hash table.
 
 
 ## Unguided
@@ -276,12 +261,7 @@ mencari data berdasarkan NIM, dan mencari data berdasarkan rentang nilai
 ```
 
 #### Output:
-Program ini mengimplementasikan hash table untuk menyimpan data mahasiswa, dengan fungsi untuk menambahkan, menghapus, dan mencari data berdasarkan NIM dan nilai. Program memiliki menu untuk memilih operasi yang diinginkan.
-
-Data mahasiswa disimpan dalam struktur Node, yang berisi NIM dan nilai. Hash table diimplementasikan sebagai array of linked lists, di mana setiap index menyimpan node dengan hash index yang sama.
-
-Fungsi menghitung hash index berdasarkan NIM. menambahkan data baru ke hash table. menghapus data berdasarkan NIM.  mencari data berdasarkan NIM.  mencari data berdasarkan rentang nilai.
-
+Program ini mengimplementasikan hash table untuk menyimpan data mahasiswa, dengan fungsi untuk menambahkan, menghapus, dan mencari data berdasarkan NIM dan nilai. Program memiliki menu untuk memilih operasi yang diinginkan. Data mahasiswa disimpan dalam struktur Node, yang berisi NIM dan nilai. Hash table diimplementasikan sebagai array of linked lists, di mana setiap index menyimpan node dengan hash index yang sama. Beberapa fungsi yang dapat dijalankan, yaitu menambahkan data baru ke hash table, menghapus data berdasarkan NIM,  mencari data berdasarkan NIM, mencari data berdasarkan rentang nilai.
 
 
 ## Kesimpulan
