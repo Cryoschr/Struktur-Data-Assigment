@@ -468,6 +468,7 @@ Hash table adalah struktur data yang efisien dan serbaguna untuk menyimpan dan m
 3. Search
 4. Update
 5. Traversal
+
 Kekurangan dari hash table adalah kemungkinan terjadinya collision dan untuk menanganinnya ada dua teknik yaitu :
 1. Separate chaining (Open Hashing)
 2. Open addresing (Closed Hasing)
