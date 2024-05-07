@@ -2,49 +2,18 @@
 <p align="center">Irshad Benaya Fardeca</p>
 
 # Dasar Teori
-Stack adalah daftar elemen homogen di mana penambahan dan penghapusan elemen hanya terjadi pada satu ujung, yang disebut top (puncak) stack
+Stack atau tumpukan adalah suatu stuktur data yang penting dalam pemrograman dengan metode pemrosesan yang bersifat LIFO (Last In First Out) dimana objek/benda yang terakhir masuk ke dalam stack akan menjadi benda pertama yang dikeluarkan dari stack. Dengan model demikian, maka hanya bagian paling atas saja dari stack (TOP) yang bisa di akses.
 
-Elemen di bagian bawah tumpukan (stack) adalah elemen yang sudah paling lama berada di dalam tumpukan. Elemen teratas tumpukan adalah elemen terakhir yang ditambahkan ke tumpukan. Karena elemen ditambahkan dan dihapus dari satu ujung (yaitu, bagian atas), maka elemen yang terakhir ditambahkan akan menjadi yang pertama kali dihapus. Oleh karena itu, tumpukan juga disebut sebagai struktur data Last In First Out (LIFO).
-
-Stack: Struktur data tempat elemen ditambahkan dan dihapus hanya dari satu ujung; struktur data Last In First Out (LIFO). Sekarang setelah Anda mengetahui apa itu tumpukan, mari kita lihat operasi apa saja yang dapat dilakukan pada tumpukan.
-
-Karena item baru dapat ditambahkan ke tumpukan, kita dapat melakukan operasi penambahan, yang disebut push, untuk menambahkan elemen ke tumpukan. Demikian pula, karena item teratas dapat diambil dan/atau dihapus dari tumpukan, kita dapat melakukan operasi top untuk mengambil elemen teratas tumpukan dan operasi pop untuk menghapus elemen teratas dari tumpukan. Operasi push, top, dan pop bekerja sebagai berikut:
-
-Misalkan ada beberapa kotak yang tergeletak di lantai yang perlu ditumpuk di atas meja. Awalnya, semua kotak berada di lantai, dan tumpukannya kosong.
-
-initializeStack: Meminisiasi tumpukan menjadi kosong.
-isEmptyStack: Menentukan apakah tumpukan kosong. Jika tumpukan kosong, fungsi ini mengembalikan nilai true; jika tidak, fungsi ini mengembalikan nilai false.
-isFullStack: Menentukan apakah tumpukan sudah penuh. Jika tumpukan penuh, fungsi ini mengembalikan nilai true; jika tidak, fungsi ini mengembalikan nilai false.
-push: Menambahkan elemen baru ke puncak tumpukan. Input untuk operasi ini terdiri dari tumpukan dan elemen baru. Sebelum melakukan operasi ini, tumpukan harus ada dan tidak boleh penuh.
-top: Mengembalikan elemen teratas dari tumpukan. Sebelum melakukan operasi ini, tumpukan harus ada dan tidak boleh penuh.
-pop: Menghapus elemen teratas dari tumpukan. Sebelum melakukan operasi ini, tumpukan harus ada dan tidak boleh kosong.
-
-
-
-
-Stack atau tumpukan adalah suatu stuktur
-data yang penting dalam pemrograman
-dengan metode pemrosesan yang bersifat
-LIFO (Last In First Out) dimana objek/benda
-yang terakhir masuk ke dalam stack akan
-menjadi benda pertama yang dikeluarkan dari
-stack. Dengan model demikian, maka hanya
-bagian paling atas saja dari stack (TOP) yang
-bisa di akses.
-
-Adapuu operasi-operasi/fungsi yang dapat
-dilakukan pada stack adalah sebagai berikut :
-1) Push : digunakan untuk menambah item
-pada stack pada tumpukan paling atas
-2) Pop : digunakan untuk mengambil item
-pada stack pada tumpukan paling atas
-3) Clear : digunakan untuk mengosongkan
-stack
-4) IsEmpty : fungsi yang digunakan untuk
-mengecek apakah stack sudah kosong
-5) IsFull : fungsi yang digunakan untuk
-mengecek apakah stack sudah penuh
-
+Adapun operasi-operasi/fungsi yang dapat dilakukan pada stack adalah sebagai berikut :
+1) Push : digunakan untuk menambah item pada stack pada tumpukan paling atas.
+2) Pop : digunakan untuk mengambil item pada stack pada tumpukan paling atas.
+3) Clear : digunakan untuk mengosongkan stack.
+4) IsEmpty : fungsi yang digunakan untuk mengecek apakah stack sudah kosong.
+5) IsFull : fungsi yang digunakan untuk mengecek apakah stack sudah penuh. [1]
+6) Top : Mendapatkan nilai atau melihat elemen teratas pada tumpukan tanpa menghapusnya.
+7) Size : Mengembalikan jumlah elemen yang ada dalam tumpukan.
+8) Peek : Melihat nilai atau elemen pada posisi tertentu dalam tumpukan tanpa menghapusnya.
+9) Search : Mencari keberadaan elemen tertentu dalam tumpukan.[2]
 
 
 
@@ -169,7 +138,13 @@ return 0;
 ```
 #### Output:
 ![Screenshot 2024-05-05 224414](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/90f09502-1764-49e7-952e-4b629a14abb9)
+Program ini menunjukkan implementasi stack (tumpukan) sederhana dalam bahasa C++. Stack diimplementasikan menggunakan array dengan beberapa fungsi untuk melakukan operasi stack dasar.
 
+Stack diinisialisasi dengan kapasitas 5 elemen dan fungsi-fungsi seperti push(), pop(), peek(), count(), change(), destroy(), dan cetak() didefinisikan untuk memanipulasi dan menampilkan elemen dalam stack.
+
+Fungsi main() mendemonstrasikan penggunaan fungsi-fungsi stack dengan menambahkan 5 buah buku ke stack, menampilkan isi stack, mengecek status stack (penuh/kosong), melihat elemen tertentu, menghapus elemen teratas, mengubah elemen, menghapus semua elemen, dan menampilkan kembali isi stack yang kosong.
+
+Program ini memberikan contoh dasar implementasi stack dan dapat dimodifikasi untuk kebutuhan aplikasi yang berbeda dengan menambahkan fungsi-fungsi lain atau mengubah struktur data yang digunakan.
 
 
 
@@ -191,7 +166,9 @@ return 0;
 ```
 
 ## Kesimpulan
+Stack atau tumpukan adalah struktur data yang penting dalam pemrograman dengan metode LIFO (Last In First Out). Elemen yang terakhir masuk ke dalam stack akan menjadi yang pertama kali dikeluarkan. Stack hanya dapat diakses dari bagian atasnya (TOP).
 
 ## Referensi
-Malik, D. S. (2023). C++ programming. Cengage Learning, EMEA.
-Sihombing, J. (2019). Penerapan Stack Dan Queue Pada Array Dan Linked List Dalam Java. INFOKOM (Informatika & Komputer), 7(2), 15-24.
+[1] Sihombing, J. (2019). Penerapan Stack Dan Queue Pada Array Dan Linked List Dalam Java. INFOKOM (Informatika & Komputer), 7(2), 15-24.
+
+[2] 
