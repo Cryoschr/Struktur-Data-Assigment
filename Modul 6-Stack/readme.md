@@ -138,13 +138,7 @@ return 0;
 ```
 #### Output:
 ![Screenshot 2024-05-05 224414](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/90f09502-1764-49e7-952e-4b629a14abb9)
-Program ini menunjukkan implementasi stack (tumpukan) sederhana dalam bahasa C++. Stack diimplementasikan menggunakan array dengan beberapa fungsi untuk melakukan operasi stack dasar.
-
-Stack diinisialisasi dengan kapasitas 5 elemen dan fungsi-fungsi seperti push(), pop(), peek(), count(), change(), destroy(), dan cetak() didefinisikan untuk memanipulasi dan menampilkan elemen dalam stack.
-
-Fungsi main() mendemonstrasikan penggunaan fungsi-fungsi stack dengan menambahkan 5 buah buku ke stack, menampilkan isi stack, mengecek status stack (penuh/kosong), melihat elemen tertentu, menghapus elemen teratas, mengubah elemen, menghapus semua elemen, dan menampilkan kembali isi stack yang kosong.
-
-Program ini memberikan contoh dasar implementasi stack dan dapat dimodifikasi untuk kebutuhan aplikasi yang berbeda dengan menambahkan fungsi-fungsi lain atau mengubah struktur data yang digunakan.
+Program ini menunjukkan implementasi stack (tumpukan). Stack diimplementasikan menggunakan array dengan beberapa fungsi untuk melakukan operasi stack dasar. Program ini memiliki beberapa fungsi yaitu menambahkan 5 buah buku ke stack, menampilkan isi stack, mengecek status stack (penuh/kosong), melihat elemen tertentu, menghapus elemen teratas, mengubah elemen, menghapus semua elemen, dan menampilkan kembali isi stack yang kosong.
 
 
 
@@ -153,22 +147,157 @@ Program ini memberikan contoh dasar implementasi stack dan dapat dimodifikasi un
 ![Screenshot 2024-05-05 232433](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/80b36eb0-1c66-4d10-93e3-48e8518388f8)
 
 ```C++
+//Irshad Benaya Fardeca
+//2311102199
 
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+
+//inisialisasi dan deklarasi
+string arrayKata [15];
+int maks = 15, top = 0;
+
+//cek apakah penuh
+bool isFull(){
+    return (top == maks);
+}
+
+//mengubah huruf besar menjadi kecil
+string lowerCase(string kataLower){
+
+    string lowercase= "";
+
+    for (int i = 0; i <kataLower.length(); i++) {
+        lowercase += tolower(kataLower[i]);
+    }
+    return lowercase;
+}
+
+// Periksa apakah kalimatnya palindrom
+void palindrom(string kataLower){
+
+    string kata = lowerCase(kataLower);
+    string palindromKata = "";
+
+    for (int i = kataLower.length() - 1; i >= 0; i--){
+        palindromKata += kata[i];
+    }
+
+
+    if (kata == palindromKata) {
+        cout << "Kata tersebut adalah Palindrom" << endl;
+    } else {
+        cout << "Kata tersebut adalah Bukan Palindrom" << endl;
+    }
+}
+
+//memasukkan data
+void pushKata(string data){
+    if (isFull()){
+        cout<<"Data penuh"<<endl;
+    }else{
+        palindrom(data);
+        arrayKata[top]=data;
+        top++;
+    }
+}
+
+int main(){
+    // Masukkan kata
+    string kata;
+    cout << "Masukkan kata: ";
+    getline(cin, kata);
+    pushKata(kata);
+
+
+return 0;
+}
 ```
 #### Output:
+![Screenshot 2024-05-08 224409](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/ecacf3b5-3831-4cfd-9619-dad97f5d0f9a)
+Program ini mengimplementasikan stack untuk memeriksa apakah kata yang dimasukkan oleh pengguna merupakan kata palindrom atau bukan.
 
 ### 2. Buatlah program untuk melakukan pembalikan terhadap kalimat menggunakan stack dengan minimal 3 kata. Jelaskan output program dan source codenya beserta operasi/fungsi yang dibuat?
 ![Screenshot 2024-05-05 232521](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/d385861e-9a75-4d72-b0a1-f3f0cf9b8c6f)
-
-#### Output:
 ```C++
+//Irshad Benaya Fardeca
+//2311102199
+
+#include <iostream>
+using namespace std;
+
+struct Stack {
+  char data[100];
+  int top;
+
+  Stack() {
+    top = -1;
+  }
+
+  //apakah stack kosong
+  bool isEmpty() {
+    return top == -1;
+  }
+
+  //apakah stack penuh
+  bool isFull() {
+    return top == 99;
+  }
+
+//memasukkan data
+  void push(char kata) {
+    if (isFull()) {
+      cout << "Stack penuh" << endl;
+      return;
+    }
+    data[++top] = kata;
+  }
+
+
+  char pop() {
+    if (isEmpty()) {
+      cout << "Tidak ada data yang dihapus" << endl;
+    }
+    return data[top--];
+
+  }
+};
+
+int main() {
+  string kata;
+  Stack tumpukan;
+
+  //Input kata
+  cout << "Masukkan kata: ";
+  getline(cin, kata);
+
+  // Memasukkan setiap karakter kata ke dalam stack
+  for (char c : kata) {
+    tumpukan.push(c);
+  }
+
+  // Membalik kata dengan mengeluarkan karakter dari stack
+  kata = "";
+  while (!tumpukan.isEmpty()) {
+    kata += tumpukan.pop();
+  }
+
+  // Menampilkan kata yang dibalik
+  cout << "Kata setelah dibalik: " << kata << endl;
+
+  return 0;
+}
 
 ```
+#### Output:
+![Screenshot 2024-05-08 224617](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/43a0fa51-a6cf-42e9-ab71-612222ce008e)
+Program ini digunakan untuk mengambil kata yang dimasukkan pengguna, membalik urutan karakternya, dan menampilkan kata yang terbalik.
 
 ## Kesimpulan
 Stack atau tumpukan adalah struktur data yang penting dalam pemrograman dengan metode LIFO (Last In First Out). Elemen yang terakhir masuk ke dalam stack akan menjadi yang pertama kali dikeluarkan. Stack hanya dapat diakses dari bagian atasnya (TOP).
 
 ## Referensi
 [1] Sihombing, J. (2019). Penerapan Stack Dan Queue Pada Array Dan Linked List Dalam Java. INFOKOM (Informatika & Komputer), 7(2), 15-24.
-
-[2] 
+[2] MODUL 6 STACK
