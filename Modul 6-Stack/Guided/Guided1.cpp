@@ -5,14 +5,17 @@ using namespace std;
 string arrayBuku [5];
 int maksimal = 5, top = 0;
 
+//cek apakah penuh
 bool isFull(){
     return (top == maksimal);
 }
 
+//cek apakah kosong
 bool isEmpty(){
     return (top == 0);
 }
 
+//memasukkan data
 void pushArrayBuku(string data){
     if (isFull()){
         cout<<"Data telah penuh"<<endl;
@@ -22,6 +25,7 @@ void pushArrayBuku(string data){
     }
 }
 
+//mengeluarkam data
 void popArrayBuku(){
     if (isEmpty()){
         cout<<"Tidak ada data yang dihapus"<<endl;
@@ -31,6 +35,7 @@ void popArrayBuku(){
     }
 }
 
+//melihat data
 void peekArrayBuku(int posisi){
     if (isEmpty()){
         cout<<"Tidak ada data yang dilihat"<<endl;
@@ -39,7 +44,7 @@ void peekArrayBuku(int posisi){
         for (int i=1;i<=posisi;i++){
             index--;
         }
-        cout<<"Posisi ke "<<posisi<<" adalah"<<arrayBuku[index]<<endl;
+        cout<<"Posisi ke "<<posisi<<" adalah "<<arrayBuku[index]<<endl;
     }
 }
 
@@ -47,6 +52,7 @@ int countStack(){
     return top;
 }
 
+//mengubah data
 void changeArrayBuku(int posisi, string data){
     if (posisi>top){
         cout<<"Posisi melebihi data yang ada"<<endl;
@@ -59,6 +65,7 @@ void changeArrayBuku(int posisi, string data){
     }
 }
 
+//menghapus semua data
 void destroyArrayBuku(){
     for (int i=top;i>=0;i--){
         arrayBuku[i]="";
@@ -66,6 +73,7 @@ void destroyArrayBuku(){
     top=0;
 }
 
+//menampilkan
 void cetakArrayBuku(){
     if (isEmpty()){
         cout<<"Tidak ada data yang dicetak"<<endl;
@@ -86,8 +94,8 @@ int main(){
     cetakArrayBuku();
     cout<<"\n";
 
-    cout<<"Apakah data stack penuh?"<<isFull()<<endl;
-    cout<<"Apakah data stack kosong?"<<isEmpty()<<endl;
+    cout<<"Apakah data stack penuh? "<<isFull()<<endl;
+    cout<<"Apakah data stack kosong? "<<isEmpty()<<endl;
 
     peekArrayBuku(2);
     popArrayBuku();
@@ -100,6 +108,8 @@ int main(){
     cout<<"\n";
 
     destroyArrayBuku();
+    cout << "Jumlah data setelah dihapus: " << top << endl;
+    cetakArrayBuku();
 
 return 0;
 }
