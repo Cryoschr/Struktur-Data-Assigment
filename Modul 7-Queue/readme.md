@@ -27,21 +27,117 @@ Sedangkan bentuk fungsi-fungsi queue dapat dilihat berikut ini :
 ## Guided 
 ### 1. Queue
 ```C++
+#include <iostream>
+using namespace std;
 
+const int maksimalQueue = 5; // Maksimal antrian
+int front = 0; // Penanda antrian
+int back = 0; // Penanda
+string queueTeller[5]; // Fungsi pengecekan
+
+bool isFull() { // Pengecekan antrian penuh atau tidak
+    if (back == maksimalQueue) {
+        return true; // =1
+    } else {
+        return false;
+    }
+}
+
+bool isEmpty() { // Antriannya kosong atau tidak
+    if (back == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+void enqueueAntrian(string data) { // Fungsi menambahkan antrian
+    if (isFull()) {
+        cout << "Antrian penuh" << endl;
+    } else {
+        
+    if (isEmpty()) { // Kondisi ketika queue kosong
+        queueTeller[0] = data;
+        front++;
+        back++;
+    } else { // Antrianya ada isi
+        queueTeller[back] = data;
+        back++;
+        }
+    }
+}
+
+void dequeueAntrian() { // Fungsi mengurangi antrian
+    if (isEmpty()) {
+        cout << "Antrian kosong" << endl;
+    } else {
+        for (int i = 0; i < back; i++) {
+        queueTeller[i] = queueTeller[i + 1];
+        }
+        back--;
+    }
+}
+
+int countQueue() { // Fungsi menghitung banyak antrian
+    return back;
+    }
+
+void clearQueue() { // Fungsi menghapus semua antrian
+        if (isEmpty()) {
+        cout << "Antrian kosong" << endl;
+    } else {
+        for (int i = 0; i < back; i++) {
+        queueTeller[i] = "";
+        }
+        back = 0;
+        front = 0;
+    }
+}
+
+void viewQueue() { // Fungsi melihat antrian
+    cout << "Data antrian teller:" << endl;
+    for (int i = 0; i < maksimalQueue; i++) {
+        if (queueTeller[i] != "") {
+            cout << i + 1 << ". " << queueTeller[i] << endl;
+        } else {
+            cout << i + 1 << ". (kosong)" << endl;
+        }
+    }
+}
+
+
+int main() {
+
+enqueueAntrian("Andi");
+enqueueAntrian("Maya");
+viewQueue();
+cout << "Jumlah antrian = " << countQueue() << endl;
+
+dequeueAntrian();
+viewQueue();
+cout << "Jumlah antrian = " << countQueue() << endl;
+
+clearQueue();
+viewQueue();
+cout << "Jumlah antrian = " << countQueue() << endl;
+
+return 0;
+}
 ```
 #### Output:
+![Screenshot 2024-05-15 210217](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/e6b3d351-3e14-44ff-a993-07b4f085b923)
 
 
 
 ## Unguided
-### 1. Buatlah program untuk menentukan apakah kalimat tersebut yang diinputkan dalam program stack adalah palindrom/tidak. Palindrom kalimat yang dibaca dari depan dan belakang sama. Jelaskan bagaimana cara kerja programnya.
+### 1. Ubahlah penerapan konsep queue pada bagian guided dari array menjadi linked list
 
 ```C++
 
 ```
 #### Output:
 
-### 2. Buatlah program untuk melakukan pembalikan terhadap kalimat menggunakan stack dengan minimal 3 kata. Jelaskan output program dan source codenya beserta operasi/fungsi yang dibuat?
+### 2. Dari nomor 1 buatlah konsep antri dengan atribut Nama mahasiswa dan NIM Mahasiswa
 
 ```C++
 
