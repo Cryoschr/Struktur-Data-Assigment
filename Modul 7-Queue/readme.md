@@ -4,8 +4,9 @@
 <p align="center"> 2311102199</p>
 
 # Dasar Teori
-Kebalikan dari stack, queue (antrian) adalah suatu jenis struktur data yang dapat diproses dengan sifat FIFO (First In First Out), dimana elemen yang pertama kali masuk ke antrian akan keluar pertama kalinya. Ada
-dua jenis operasi yang bias dilakukan di antrian : enqueue (memasukkan elemen baru ke dalam elemen) dan dequeue (adalah mengeluarkan satu elemen dari suatu antrian)
+Queue (antrian) adalah suatu jenis struktur data yang dapat diproses dengan sifat FIFO (First In First Out), dimana elemen yang pertama kali masuk ke antrian akan keluar pertama kalinya. Ada
+dua jenis operasi yang biasa dilakukan di antrian : enqueue (memasukkan elemen baru ke dalam elemen) dan dequeue (adalah mengeluarkan satu elemen dari suatu antrian).
+
 Sedangkan bentuk fungsi-fungsi queue dapat dilihat berikut ini :
 1) Fungsi Initialize
 2) Fungsi Is_Empty, yang antara lain digunakan untuk :
@@ -126,26 +127,335 @@ return 0;
 ```
 #### Output:
 ![Screenshot 2024-05-15 210217](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/e6b3d351-3e14-44ff-a993-07b4f085b923)
-
+Program ini mensimulasikan sistem antrian untuk teller. Program ini mendefinisikan fungsi untuk menambah (enqueue), menghapus (dequeue), memeriksa penuh dan kosong, menghitung jumlah elemen, dan menampilkan isi antrian. Program ini menggunakan array string untuk menyimpan elemen antrian dan variabel penunjuk untuk melacak posisi depan dan belakang antrian. Program ini juga mendefinisikan konstanta untuk menentukan kapasitas maksimum antrian. Fungsi utama mendemonstrasikan penggunaan fungsi-fungsi antrian dengan menambahkan dua pelanggan, "Andi" dan "Maya", ke antrian, menampilkan antrian dan ukurannya, menghapus satu pelanggan, memperbarui tampilan dan ukuran, dan terakhir mengosongkan antrian untuk menunjukkan status kosongnya.
 
 
 ## Unguided
 ### 1. Ubahlah penerapan konsep queue pada bagian guided dari array menjadi linked list
 
 ```C++
+//Irshad Benaya Fardeca
+//2311102199
 
+#include <iostream>
+using namespace std;
+
+//deklarasi
+struct antrianTeller{
+  string data;
+
+  antrianTeller *next;
+};
+
+//maks antrian
+int maksimalAntrianTeller = 5;
+antrianTeller *head, *tail, *cur, *del, *newNode;
+
+//menghitung banyak antrian
+int countQueue(){
+  if( head == NULL ){
+    return 0;
+  }else{
+    int banyak = 0;
+    cur = head;
+    while( cur != NULL ){
+      cur = cur->next;
+      banyak++;
+    }
+    return banyak;
+  }
+}
+
+//mengecek apakah penuh
+bool isFull(){
+  if( countQueue() == maksimalAntrianTeller ){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+//mengecek apakah kosong
+bool isEmpty(){
+  if( countQueue() == 0 ){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+//memasukkan kedalam antrian
+void enqueueAntrian(string data){
+  if( isFull() ){
+    cout << "Antrian Penuh!" << endl;
+  }else{
+    
+    if( isEmpty() ){
+      head = new antrianTeller();
+      head->data = data;
+      head->next = NULL;
+      tail = head;
+    }else{
+      newNode = new antrianTeller();
+      newNode->data = data;
+      newNode->next = NULL;
+      tail->next = newNode;
+      tail = newNode;
+    }
+
+  }
+
+}
+
+//mengluarkan darri antrian
+void dequeueAntrian(){
+  if( isEmpty() ){
+    cout << "Antrian kosong" << endl;
+  }else{
+    del = head;
+    head = head->next;
+    del->next = NULL;
+    delete del;
+  }
+}
+
+//menghapus semua antrian
+void clearQueue(){
+  if( isEmpty() ){
+    cout << "Antrian kosong" << endl;
+  }else{
+    cur = head;
+    while( cur != NULL ){
+      del = cur;
+      cur = cur->next;
+      del->next = NULL;
+      delete del;
+    }
+    head = NULL;
+    tail = NULL;
+  }
+}
+
+//menampilkan antrian
+void viewQueue(){
+  cout << "Data Antrian Teller : " << endl;
+    cur = head;
+    int nomor = 1;
+    while( nomor <= maksimalAntrianTeller ){
+      
+      if( cur != NULL ){
+        cout << nomor << ". " << cur->data << endl;
+        cur = cur->next;
+      }else{
+        cout << nomor << ". " << "(kosong)" << endl;
+      }
+      nomor++;
+    }
+}
+
+
+int main(){
+
+  enqueueAntrian("Andi");
+  enqueueAntrian("Maya");
+  viewQueue();
+  cout << "Jumlah antrian = " << countQueue() << endl;
+
+  dequeueAntrian();
+  viewQueue();
+  cout << "Jumlah antrian = " << countQueue() << endl;
+
+  clearQueue();
+  viewQueue();
+  cout << "Jumlah antrian = " << countQueue() << endl;
+
+
+return 0;
+}
 ```
 #### Output:
+![Screenshot 2024-05-19 191325](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/a9391e8c-d109-4256-a036-8d1c848cfc63)
+Kode C++ ini mensimulasikan sistem antrian untuk teller. Kode ini mendefinisikan struktur bernama antrianTeller untuk mewakili setiap pelanggan, yang berisi nama mereka (data) dan pointer (next) untuk menghubungkan mereka dalam antrian. Program ini menetapkan ukuran antrian maksimum (maksimalAntrianTeller) dan menggunakan fungsi untuk mengelola antrian:
+
+countQueue(): Menghitung jumlah pelanggan yang sedang menunggu.
+isFull(): Memeriksa apakah antrian sudah mencapai kapasitasnya.
+isEmpty(): Memastikan apakah antrian kosong.
+enqueueAntrian(string data): Menambahkan nama pelanggan baru (data) ke bagian belakang antrian, menangani skenario antrian penuh dan kosong.
+dequeueAntrian(): Menghapus pelanggan di depan (yang dilayani), menangani kasus antrian kosong.
+clearQueue(): Mengosongkan seluruh antrian dengan iterasi dan menghapus setiap pelanggan.
+viewQueue(): Menampilkan isi antrian, menunjukkan posisi kosong jika ada.
+
+Fungsi main mendemonstrasikan fungsi-fungsi ini dengan menambahkan pelanggan, melihat antrian dan ukurannya, menghapus pelanggan, memperbarui tampilan dan ukuran, dan terakhir mengosongkan antrian untuk menunjukkan status kosongnya.
 
 ### 2. Dari nomor 1 buatlah konsep antri dengan atribut Nama mahasiswa dan NIM Mahasiswa
 
 ```C++
+//Irshad Benaya Fardeca
+//2311102199
 
+#include <iostream>
+using namespace std;
+
+//deklarasi
+struct antrianMahasiswa{
+  string nama;
+  string nim;
+
+  antrianMahasiswa *next;
+};
+
+//maks data
+int maksimalAntrianMahasiswa = 5;
+antrianMahasiswa *head, *tail, *cur, *del, *newNode;
+
+//menghitung data
+int countQueue(){
+  if( head == NULL ){
+    return 0;
+  }else{
+    int banyak = 0;
+    cur = head;
+    while( cur != NULL ){
+      cur = cur->next;
+      banyak++;
+    }
+    return banyak;
+  }
+}
+
+//mengecek data apakah penuh
+bool isFull(){
+  if( countQueue() == maksimalAntrianMahasiswa ){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+//mengecek data apakah kosong
+bool isEmpty(){
+  if( countQueue() == 0 ){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+//memasukkan data ke dalam queue
+void enqueueAntrian(string nama, string nim){
+  if( isFull() ){
+    cout << "Antrian Penuh" << endl;
+  }else{
+    
+    if( isEmpty() ){
+      head = new antrianMahasiswa();
+      head->nama = nama;
+      head->nim = nim;
+      head->next = NULL;
+      tail = head;
+    }else{
+      newNode = new antrianMahasiswa();
+      newNode->nama = nama;
+      newNode->nim = nim;
+      newNode->next = NULL;
+      tail->next = newNode;
+      tail = newNode;
+    }
+
+  }
+
+}
+
+//mengeluarkan data dari queue
+void dequeueAntrian(){
+  if( isEmpty() ){
+    cout << "Antrian kosong" << endl;
+  }else{
+    del = head;
+    head = head->next;
+    del->next = NULL;
+    delete del;
+  }
+}
+
+//menghapus semua data
+void clearQueue(){
+  if( isEmpty() ){
+    cout << "Antrian kosong" << endl;
+  }else{
+    cur = head;
+    while( cur != NULL ){
+      del = cur;
+      cur = cur->next;
+      del->next = NULL;
+      delete del;
+    }
+    head = NULL;
+    tail = NULL;
+  }
+}
+
+//menampilkan queue
+void viewQueue(){
+  cout << "Daftar Antrian Mahasiswa : " << endl;
+    cur = head;
+    int nomor = 1;
+    while( nomor <= maksimalAntrianMahasiswa ){
+      
+      if( cur != NULL ){
+        cout << nomor << ". " << cur->nama << "_" << cur->nim << endl;
+        cur = cur->next;
+      }else{
+        cout << nomor << ". " << "(kosong)" << endl;
+      }
+      nomor++;
+    }
+}
+
+
+int main(){
+
+  enqueueAntrian("Maya", "2311102188");
+  enqueueAntrian("Sela", "2311102189");
+  enqueueAntrian("Andi", "2311102190");
+  enqueueAntrian("Irshad", "2311102199");
+  enqueueAntrian("Ani", "231103288");
+  viewQueue();
+  cout << "Jumlah antrian = " << countQueue() << endl;
+
+  dequeueAntrian();
+  viewQueue();
+  cout << "Jumlah antrian = " << countQueue() << endl;
+
+  dequeueAntrian();
+  viewQueue();
+  cout << "Jumlah antrian = " << countQueue() << endl;
+
+  clearQueue();
+  viewQueue();
+  cout << "Jumlah antrian = " << countQueue() << endl;
+
+
+return 0;
+}
 ```
 #### Output:
+![Screenshot 2024-05-19 213412](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/315c6f0e-034b-4c6c-beb5-7f2059c4ff85)
+Program ini mensimulasikan sistem antrian untuk mengelola mahasiswa yang ingin mengurus sesuatu, seperti mengurus administrasi atau mengikuti kelas. Program ini menggunakan struktur data antrian untuk menyimpan informasi mahasiswa dan fungsi-fungsi untuk mengelola antrian. Fungsi-fungsi ini meliputi:
+
+countQueue(): Menghitung jumlah mahasiswa yang sedang dalam antrian.
+isFull(): Memeriksa apakah antrian sudah penuh atau belum.
+isEmpty(): Memastikan apakah antrian kosong.
+enqueueAntrian(string nama, string nim): Menambahkan mahasiswa baru ke bagian belakang antrian.
+dequeueAntrian(): Menghapus mahasiswa di depan (yang dilayani), menangani kasus antrian kosong.
+clearQueue(): Mengosongkan seluruh antrian dengan iterasi dan menghapus setiap mahasiswa.
+viewQueue(): Menampilkan isi antrian, menunjukkan posisi kosong jika ada.
+Fungsi utama (main) mendemonstrasikan fungsi-fungsi ini dengan menambahkan mahasiswa, melihat antrian dan ukurannya, menghapus mahasiswa, memperbarui tampilan dan ukuran, dan terakhir mengosongkan antrian untuk menunjukkan status kosongnya.
+
 
 ## Kesimpulan
+Queue atau antrian merupakan struktur data yang mengikuti prinsip FIFO (First In First Out), di mana elemen yang pertama masuk akan keluar terlebih dahulu. Secara keseluruhan, queue dengan linked list cocok untuk skenario di mana ukuran queue tidak diketahui atau perlu fleksibel. Namun, jika akses acak cepat menjadi prioritas utama, implementasi array mungkin lebih cocok.
 
 ## Referensi
 [1] Sihombing, J. (2019). Penerapan Stack Dan Queue Pada Array Dan Linked List Dalam Java. INFOKOM (Informatika & Komputer), 7(2), 15-24.
-[2] 
+
