@@ -5,17 +5,18 @@
 using namespace std;
 
 //deklarasi
-struct antrianTeller{
-  string data;
+struct antrianMahasiswa{
+  string nama;
+  string nim;
 
-  antrianTeller *next;
+  antrianMahasiswa *next;
 };
 
-//maks antrian
-int maksimalAntrianTeller = 5;
-antrianTeller *head, *tail, *cur, *del, *newNode;
+//maks data
+int maksimalAntrianMahasiswa = 5;
+antrianMahasiswa *head, *tail, *cur, *del, *newNode;
 
-//menghitung banyak antrian
+//menghitung data
 int countQueue(){
   if( head == NULL ){
     return 0;
@@ -30,16 +31,16 @@ int countQueue(){
   }
 }
 
-//mengecek apakah penuh
+//mengecek data apakah penuh
 bool isFull(){
-  if( countQueue() == maksimalAntrianTeller ){
+  if( countQueue() == maksimalAntrianMahasiswa ){
     return true;
   }else{
     return false;
   }
 }
 
-//mengecek apakah kosong
+//mengecek data apakah kosong
 bool isEmpty(){
   if( countQueue() == 0 ){
     return true;
@@ -48,20 +49,22 @@ bool isEmpty(){
   }
 }
 
-//memasukkan kedalam antrian
-void enqueueAntrian(string data){
+//memasukkan data ke dalam queue
+void enqueueAntrian(string nama, string nim){
   if( isFull() ){
     cout << "Antrian Penuh" << endl;
   }else{
     
     if( isEmpty() ){
-      head = new antrianTeller();
-      head->data = data;
+      head = new antrianMahasiswa();
+      head->nama = nama;
+      head->nim = nim;
       head->next = NULL;
       tail = head;
     }else{
-      newNode = new antrianTeller();
-      newNode->data = data;
+      newNode = new antrianMahasiswa();
+      newNode->nama = nama;
+      newNode->nim = nim;
       newNode->next = NULL;
       tail->next = newNode;
       tail = newNode;
@@ -71,7 +74,7 @@ void enqueueAntrian(string data){
 
 }
 
-//mengluarkan darri antrian
+//mengeluarkan data dari queue
 void dequeueAntrian(){
   if( isEmpty() ){
     cout << "Antrian kosong" << endl;
@@ -83,7 +86,7 @@ void dequeueAntrian(){
   }
 }
 
-//menghapus semua antrian
+//menghapus semua data
 void clearQueue(){
   if( isEmpty() ){
     cout << "Antrian kosong" << endl;
@@ -100,15 +103,15 @@ void clearQueue(){
   }
 }
 
-//menampilkan antrian
+//menampilkan queue
 void viewQueue(){
-  cout << "Data Antrian Teller : " << endl;
+  cout << "Daftar Antrian Mahasiswa : " << endl;
     cur = head;
     int nomor = 1;
-    while( nomor <= maksimalAntrianTeller ){
+    while( nomor <= maksimalAntrianMahasiswa ){
       
       if( cur != NULL ){
-        cout << nomor << ". " << cur->data << endl;
+        cout << nomor << ". " << cur->nama << "_" << cur->nim << endl;
         cur = cur->next;
       }else{
         cout << nomor << ". " << "(kosong)" << endl;
@@ -120,8 +123,15 @@ void viewQueue(){
 
 int main(){
 
-  enqueueAntrian("Andi");
-  enqueueAntrian("Maya");
+  enqueueAntrian("Maya", "2311102188");
+  enqueueAntrian("Sela", "2311102189");
+  enqueueAntrian("Andi", "2311102190");
+  enqueueAntrian("Irshad", "2311102199");
+  enqueueAntrian("Ani", "231103288");
+  viewQueue();
+  cout << "Jumlah antrian = " << countQueue() << endl;
+
+  dequeueAntrian();
   viewQueue();
   cout << "Jumlah antrian = " << countQueue() << endl;
 
