@@ -4,26 +4,15 @@
 <p align="center"> 2311102199</p>
 
 # Dasar Teori
-Queue (antrian) adalah suatu jenis struktur data yang dapat diproses dengan sifat FIFO (First In First Out), dimana elemen yang pertama kali masuk ke antrian akan keluar pertama kalinya. Ada
-dua jenis operasi yang biasa dilakukan di antrian : enqueue (memasukkan elemen baru ke dalam elemen) dan dequeue (adalah mengeluarkan satu elemen dari suatu antrian).
+Queue (antrian) adalah suatu jenis struktur data yang dapat diproses dengan sifat FIFO (First In First Out), dimana elemen yang pertama kali masuk ke antrian akan keluar pertama kalinya. Implementasi queue dapat dilakukan dengan menggunakan array atau linked list. Ada dua jenis operasi yang biasa dilakukan di queue : enqueue (memasukkan elemen baru ke dalam elemen) dan dequeue (adalah mengeluarkan satu elemen dari suatu antrian).
 
-Sedangkan bentuk fungsi-fungsi queue dapat dilihat berikut ini :
-1) Fungsi Initialize
-2) Fungsi Is_Empty, yang antara lain digunakan untuk :
-   a. Untuk memeriksa apakah Antrian sudah penuh atau belum
-   b. Dengan cara memeriksa nilai Tail, jika Tail = -1 maka empty
-   c. Tidak perlu memeriksa Head, karena Head adalah tanda untuk kepala antrian (elemen pertama dalam antrian) yan:g tidak akan berubah
-3) Fungsi Is_Full, berfungsi untuk :
-   a. Untuk mengecek apakah Antrian sudah penuh atau belum
-   b. Dengan cara mengecek nilai Tail, jika Tail >= MAX-1 (karena MAX-1 adalah batas elemen array pada C) berarti sudah penuh
-4) Fungsi Enqueue , dengan tujuan :
-   a. Untuk menambahkan elemen ke dalam Antrian, penambahan elemen selalu ditambahkan di elemen paling belakang
-   b. Penambahan elemen selalu menggerakan variabel Tail dengan cara increment counter Tail.
-6) Fungsi Dequeue :
-   a. Digunakan untuk menghapus elemen terdepan/pertama dari Antrian21
-   b. Dengan cara mengurangi counter Tail dan menggeser semua elemen antrian kedepan.
-   c. Penggeseran dilakukan dengan menggunakan looping
-7) Fungsi Tampil , yang berfungsi untuk menampilkan nilai-nilai elemen dalam Antrian dam menggunakan looping dari head samapai tail. [1]
+Sedangkan bentuk fungsi-fungsi queue adalah sebagai berikut:
+1) Fungsi Initialize.
+2) Fungsi Is_Empty digunakan untuk memeriksa apakah Antrian sudah penuh atau belum.
+4) Fungsi Is_Full berfungsi untuk mengecek apakah Antrian sudah penuh atau belum.
+5) Fungsi Enqueue untuk menambahkan elemen ke dalam Antrian, penambahan elemen selalu ditambahkan di elemen paling belakang.
+6) Fungsi Dequeue digunakan untuk menghapus elemen terdepan/pertama dari Antrian.
+7) Fungsi Tampil yang berfungsi untuk menampilkan nilai-nilai elemen dalam Antrian. [1]
 
 ## Guided 
 ### 1. Queue
@@ -127,7 +116,7 @@ return 0;
 ```
 #### Output:
 ![Screenshot 2024-05-15 210217](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/e6b3d351-3e14-44ff-a993-07b4f085b923)
-Program ini mensimulasikan sistem antrian untuk teller. Program ini mendefinisikan fungsi untuk menambah (enqueue), menghapus (dequeue), memeriksa penuh dan kosong, menghitung jumlah elemen, dan menampilkan isi antrian. Program ini menggunakan array string untuk menyimpan elemen antrian dan variabel penunjuk untuk melacak posisi depan dan belakang antrian. Program ini juga mendefinisikan konstanta untuk menentukan kapasitas maksimum antrian. Fungsi utama mendemonstrasikan penggunaan fungsi-fungsi antrian dengan menambahkan dua pelanggan, "Andi" dan "Maya", ke antrian, menampilkan antrian dan ukurannya, menghapus satu pelanggan, memperbarui tampilan dan ukuran, dan terakhir mengosongkan antrian untuk menunjukkan status kosongnya.
+Program ini mensimulasikan sistem antrian untuk teller. Program ini mendefinisikan fungsi untuk menambah (enqueue), menghapus (dequeue), memeriksa penuh dan kosong, menghitung jumlah elemen, dan menampilkan isi antrian. Program ini menggunakan array string untuk menyimpan elemen antrian dan variabel penunjuk untuk melacak posisi depan dan belakang antrian. Fungsi utama mendemonstrasikan penggunaan fungsi-fungsi antrian dengan menambahkan dua pelanggan, "Andi" dan "Maya", ke antrian, menampilkan antrian dan ukurannya, menghapus satu pelanggan, memperbarui tampilan dan ukuran, dan terakhir mengosongkan antrian untuk menunjukkan status kosongnya.
 
 
 ## Unguided
@@ -275,17 +264,7 @@ return 0;
 ```
 #### Output:
 ![Screenshot 2024-05-19 191325](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/a9391e8c-d109-4256-a036-8d1c848cfc63)
-Kode C++ ini mensimulasikan sistem antrian untuk teller. Kode ini mendefinisikan struktur bernama antrianTeller untuk mewakili setiap pelanggan, yang berisi nama mereka (data) dan pointer (next) untuk menghubungkan mereka dalam antrian. Program ini menetapkan ukuran antrian maksimum (maksimalAntrianTeller) dan menggunakan fungsi untuk mengelola antrian:
-
-countQueue(): Menghitung jumlah pelanggan yang sedang menunggu.
-isFull(): Memeriksa apakah antrian sudah mencapai kapasitasnya.
-isEmpty(): Memastikan apakah antrian kosong.
-enqueueAntrian(string data): Menambahkan nama pelanggan baru (data) ke bagian belakang antrian, menangani skenario antrian penuh dan kosong.
-dequeueAntrian(): Menghapus pelanggan di depan (yang dilayani), menangani kasus antrian kosong.
-clearQueue(): Mengosongkan seluruh antrian dengan iterasi dan menghapus setiap pelanggan.
-viewQueue(): Menampilkan isi antrian, menunjukkan posisi kosong jika ada.
-
-Fungsi main mendemonstrasikan fungsi-fungsi ini dengan menambahkan pelanggan, melihat antrian dan ukurannya, menghapus pelanggan, memperbarui tampilan dan ukuran, dan terakhir mengosongkan antrian untuk menunjukkan status kosongnya.
+Program ini mensimulasikan sistem antrian teller dengan menciptakan struktur bernama antrianTeller yang mewakili setiap pelanggan dengan nama (data) dan pointer (next) untuk menghubungkannya ke dalam antrian. Selain itu, program ini menetapkan ukuran antrian maksimum (maksimalAntrianTeller) dan menggunakan fungsi untuk mengelola antrian, seperti menghitung jumlah pelanggan yang sedang menunggu, memeriksa apakah antrian sudah mencapai kapasitasnya, memastikan bahwa apa yang diberikan kepada pelanggan telah diberikan.
 
 ### 2. Dari nomor 1 buatlah konsep antri dengan atribut Nama mahasiswa dan NIM Mahasiswa
 
@@ -441,21 +420,11 @@ return 0;
 ```
 #### Output:
 ![Screenshot 2024-05-19 213412](https://github.com/Cryoschr/Struktur-Data-Assigment/assets/161663646/315c6f0e-034b-4c6c-beb5-7f2059c4ff85)
-Program ini mensimulasikan sistem antrian untuk mengelola mahasiswa yang ingin mengurus sesuatu, seperti mengurus administrasi atau mengikuti kelas. Program ini menggunakan struktur data antrian untuk menyimpan informasi mahasiswa dan fungsi-fungsi untuk mengelola antrian. Fungsi-fungsi ini meliputi:
-
-countQueue(): Menghitung jumlah mahasiswa yang sedang dalam antrian.
-isFull(): Memeriksa apakah antrian sudah penuh atau belum.
-isEmpty(): Memastikan apakah antrian kosong.
-enqueueAntrian(string nama, string nim): Menambahkan mahasiswa baru ke bagian belakang antrian.
-dequeueAntrian(): Menghapus mahasiswa di depan (yang dilayani), menangani kasus antrian kosong.
-clearQueue(): Mengosongkan seluruh antrian dengan iterasi dan menghapus setiap mahasiswa.
-viewQueue(): Menampilkan isi antrian, menunjukkan posisi kosong jika ada.
-Fungsi utama (main) mendemonstrasikan fungsi-fungsi ini dengan menambahkan mahasiswa, melihat antrian dan ukurannya, menghapus mahasiswa, memperbarui tampilan dan ukuran, dan terakhir mengosongkan antrian untuk menunjukkan status kosongnya.
+Program ini menggunakan struktur data queue untuk menyimpan informasi siswa dan mengelola antrian, seperti menghitung jumlah siswa yang sedang dalam antrian, memastikan apakah antrian penuh, memastikan apakah antrian kosong, menambahkan siswa baru ke bagian belakang antrian, menghapus siswa di depan antrian, dan mengosongkan seluruh antrian.
 
 
 ## Kesimpulan
-Queue atau antrian merupakan struktur data yang mengikuti prinsip FIFO (First In First Out), di mana elemen yang pertama masuk akan keluar terlebih dahulu. Secara keseluruhan, queue dengan linked list cocok untuk skenario di mana ukuran queue tidak diketahui atau perlu fleksibel. Namun, jika akses acak cepat menjadi prioritas utama, implementasi array mungkin lebih cocok.
+Queue atau antrian merupakan struktur data yang mengikuti prinsip FIFO (First In First Out), di mana elemen yang pertama masuk akan keluar terlebih dahulu. Untuk membuat struktur dapat queue dapat maenggunakan array untuk akses lebih cepat dan terdapat batas maksimum ataupun menggunakan linked list untuk menampung data dengan ukuran dinamis.
 
 ## Referensi
 [1] Sihombing, J. (2019). Penerapan Stack Dan Queue Pada Array Dan Linked List Dalam Java. INFOKOM (Informatika & Komputer), 7(2), 15-24.
-
