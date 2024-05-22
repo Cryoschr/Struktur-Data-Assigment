@@ -2,9 +2,11 @@
 #include <iomanip>
 using namespace std;
 
+//inisialisai dan deklarasi
 int arrayData[7] = {1,8,2,5,4,9,7};
 int cari;
 
+//selection sort
 void selection_sort(int arr[], int n) {
     int temp, min;
     for (int i = 0; i < n - 1; i++) {
@@ -21,6 +23,7 @@ void selection_sort(int arr[], int n) {
     }
 }
 
+//binary search
 void binary_search(int arr[], int n, int target){
     int awal = 0, akhir = n-1, tengah, b_flag = 0;
 
@@ -44,14 +47,17 @@ void binary_search(int arr[], int n, int target){
 }
 
 int main() {
+
     cout << "\tBINARY SEARCH" << endl;
     cout << "\nData awal: ";
+
     // Tampilkan data awal
     for (int x = 0; x < 7; x++) {
         cout << setw(3) << arrayData[x];
     }
     cout << endl;
 
+    //memasukkan data
     cout << "\nMasukkan data yang ingin Anda cari: ";
     cin >> cari;
 
