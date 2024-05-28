@@ -31,38 +31,38 @@ bool isEmpty()
 // Tambah Depan
 void insertDepan(int nilai)
 {
-    // Buat Node baru
-    Node *baru = new Node;
-    baru->data = nilai;
-    baru->next = NULL;
+    // Buat Node newNode
+    Node *newNode = new Node;
+    newNode->data = nilai;
+    newNode->next = NULL;
     if (isEmpty() == true)
     {
-        head = tail = baru;
+        head = tail = newNode;
         tail->next = NULL;
     }
     else
     {
-        baru->next = head;
-        head = baru;
+        newNode->next = head;
+        head = newNode;
     }
 }
 
 // Tambah Belakang
 void insertBelakang(int nilai)
 {
-    // Buat Node baru
-    Node *baru = new Node;
-    baru->data = nilai;
-    baru->next = NULL;
+    // Buat Node newNode
+    Node *newNode = new Node;
+    newNode->data = nilai;
+    newNode->next = NULL;
     if (isEmpty() == true)
     {
-        head = tail = baru;
+        head = tail = newNode;
         tail->next = NULL;
     }
     else
     {
-        tail->next = baru;
-        tail = baru;
+        tail->next = newNode;
+        tail = newNode;
     }
 }
 
@@ -93,33 +93,33 @@ void insertTengah(int data, int posisi)
     }
     else
     {
-        Node *baru, *bantu;
-        baru = new Node();
-        baru->data = data;
+        Node *newNode, *cur;
+        newNode = new Node();
+        newNode->data = data;
         // tranversing
-        bantu = head;
+        cur = head;
         int nomor = 1;
         while (nomor < posisi - 1)
         {
-            bantu = bantu->next;
+            cur = cur->next;
             nomor++;
         }
-        baru->next = bantu->next;
-        bantu->next = baru;
+        newNode->next = cur->next;
+        cur->next = newNode;
     }
 }
 
-// Hapus Depan
-void hapusDepan()
+// del Depan
+void delDepan()
 {
-    Node *hapus;
+    Node *del;
     if (isEmpty() == false)
     {
         if (head->next != NULL)
         {
-            hapus = head;
+            del = head;
             head = head->next;
-            delete hapus;
+            delete del;
         }
         else
         {
@@ -132,24 +132,24 @@ void hapusDepan()
     }
 }
 
-// Hapus Belakang
-void hapusBelakang()
+// del Belakang
+void delBelakang()
 {
-    Node *hapus;
-    Node *bantu;
+    Node *del;
+    Node *cur;
     if (isEmpty() == false)
     {
         if (head != tail)
         {
-            hapus = tail;
-            bantu = head;
-            while (bantu->next != tail)
+            del = tail;
+            cur = head;
+            while (cur->next != tail)
             {
-                bantu = bantu->next;
+                cur = cur->next;
             }
-            tail = bantu;
+            tail = cur;
             tail->next = NULL;
-            delete hapus;
+            delete del;
         }
         else
         {
@@ -162,10 +162,10 @@ void hapusBelakang()
     }
 }
 
-// Hapus Tengah
-void hapusTengah(int posisi)
+// del Tengah
+void delTengah(int posisi)
 {
-    Node *hapus, *bantu, *bantu2;
+    Node *del, *cur, *before;
     if (posisi < 1 || posisi > hitungList())
     {
         cout << "Posisi di luar jangkauan" << endl;
@@ -177,22 +177,22 @@ void hapusTengah(int posisi)
     else
     {
         int nomor = 1;
-        bantu = head;
+        cur = head;
         while (nomor <= posisi)
         {
             if (nomor == posisi - 1)
             {
-                bantu2 = bantu;
+                before = cur;
             }
             if (nomor == posisi)
             {
-                hapus = bantu;
+                del = cur;
             }
-            bantu = bantu->next;
+            cur = cur->next;
             nomor++;
         }
-        bantu2->next = bantu;
-        delete hapus;
+        before->next = cur;
+        delete del;
     }
 }
 
@@ -212,7 +212,7 @@ void ubahDepan(int data)
 // Ubah Tengah
 void ubahTengah(int data, int posisi)
 {
-    Node *bantu;
+    Node *cur;
     if (isEmpty() == false)
     {
         if (posisi < 1 || posisi > hitungList())
@@ -225,14 +225,14 @@ void ubahTengah(int data, int posisi)
         }
         else
         {
-            bantu = head;
+            cur = head;
             int nomor = 1;
             while (nomor < posisi)
             {
-                bantu = bantu->next;
+                cur = cur->next;
                 nomor++;
             }
-            bantu->data = data;
+            cur->data = data;
         }
     }
     else
@@ -254,32 +254,32 @@ void ubahBelakang(int data)
     }
 }
 
-// Hapus List
+// del List
 void clearList()
 {
-    Node *bantu, *hapus;
-    bantu = head;
-    while (bantu != NULL)
+    Node *cur, *del;
+    cur = head;
+    while (cur != NULL)
     {
-        hapus = bantu;
-        bantu = bantu->next;
-        delete hapus;
+        del = cur;
+        cur = cur->next;
+        delete del;
     }
     head = tail = NULL;
-    cout << "List berhasil terhapus!" << endl;
+    cout << "List berhasil terdel!" << endl;
 }
 
 // Tampilkan List
 void tampil()
 {
-    Node *bantu;
-    bantu = head;
+    Node *cur;
+    cur = head;
     if (isEmpty() == false)
     {
-        while (bantu != NULL)
+        while (cur != NULL)
         {
-            cout << bantu->data << ends;
-            bantu = bantu->next;
+            cout << cur->data << ends;
+            cur = cur->next;
         }
         cout << endl;
     }
@@ -300,13 +300,13 @@ int main()
     tampil();
     insertDepan(1);
     tampil();
-    hapusDepan();
+    delDepan();
     tampil();
-    hapusBelakang();
+    delBelakang();
     tampil();
     insertTengah(7, 2);
     tampil();
-    hapusTengah(2);
+    delTengah(2);
     tampil();
     ubahDepan(1);
     tampil();
